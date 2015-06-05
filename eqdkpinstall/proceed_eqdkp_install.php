@@ -44,9 +44,9 @@ $sqlpass = md5($passwordvar); //=> set var password
 //=> mysql data
 $dbtype = 'mysqli';
 $dbhost = 'localhost';
-$dbuser = 'hosttemplate';
-$dbname = "mysql_username";
-$dbpass = 'mysql_passwd';
+$dbuser = 'dbuser';
+$dbname = "mysql-username";
+$dbpass = 'mysql-passwd';
 
 //=> mysql connect
 $con = mysqli_connect($dbhost, $dbuser, $dbpass);
