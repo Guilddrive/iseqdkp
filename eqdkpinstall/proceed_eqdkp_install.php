@@ -59,7 +59,7 @@ $sql = "insert " . $var . "_users (user_id, username, user_password, user_lang, 
 mysqli_query($con, $sql);
 
 //=> declare mysql-request for table _group_users
-$sql = "insert " . $dkpname . "_groups_users" . "(group_id, user_id) VALUES (2,1)";
+$sql = "insert " . $var . "_groups_users" . "(group_id, user_id) VALUES (2,1)";
 
 //=> run mysql-request for talbe _group_users
 mysqli_query($con, $sql);
