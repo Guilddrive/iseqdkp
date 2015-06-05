@@ -8,7 +8,7 @@ define("LOGIN", "username");  //=>set API-Username
 define("PASSWD", "password"); //=>set API-Password
 define("PROTO_VER", "1.6.6.0");
 
-$sub = $_SESSION["subdomain"];  //=> 
+$subomain = $_SESSION["subdomain"];  //=> 
 $proto = PROTO_VER;
 $data =<<<EOF
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -19,17 +19,17 @@ $data =<<<EOF
             <name>$sub</name>
             <property>
                <name>www_root</name>
-               <value>/$sub.domain.de</value>
+               <value>/$subdomain.domain.de</value>
             </property>
-			      <property>
-				        <name>php</name>
-				        <value>true</value>
-			      </property>
-			      <property>
-				        <name>php_handler_id</name>
-				        <value>5.5.24</value>
-			      </property>
-			  </add>
+	    <property>
+		<name>php</name>
+		<value>true</value>
+	    </property>
+	    <property>
+	        <name>php_handler_id</name>
+	        <value>5.5.24</value>
+	    </property>
+	</add>
     </subdomain>
 </packet>
 EOF;
@@ -43,12 +43,12 @@ $subdomain_id = $xml->subdomain->add->result->id;
 
 if($subdomain_status != error){
 	echo "<img width=\"11\" height=\"11\" src=\"../images/ok.png\"/>";
-}else
-    if($subdomain_errcode == 1007){
-  		echo $subdomain_id;
-  		exit("&nbsp;<img width=\"11\" height=\"11\" src=\"../images/ok.png\"/>");
-	  }else
-	    exit("$subdomain_errcode: $subdomain_errtext");
+	}else
+	if($subdomain_errcode == 1007){
+	  	echo $subdomain_id;
+	  	exit("&nbsp;<img width=\"11\" height=\"11\" src=\"../images/ok.png\"/>");
+		}else
+		exit("$subdomain_errcode: $subdomain_errtext");
 		
 return strlen($data);
 }
