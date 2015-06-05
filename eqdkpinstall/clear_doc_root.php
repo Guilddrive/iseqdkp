@@ -1,16 +1,17 @@
 <?php
-function clear_doc_root($var){
-  $delete1 = ("/var/www/vhosts/domain.de/$var/a_new_webspace_logo.png");
-  $delete2 = ("/var/www/vhosts/domain.de/$var/a_new_webspace_index.php");
-  if(!@unlink($delete1)){
-    $header = "From: Error-Reporting <email@tld.de>\r\n";
-    $header .= "Content-Type: text/plain; Charset=utf-8\r\n";
-    mail("admin@tld.de", "ERROR:EQDKP_INSTALLATION", "clear doc root var1",$header);
-  }
-  if(!@unlink($delete2)){
-    $header = "From: Error-Reporting <email@tld.de>\r\n";
-    $header .= "Content-Type: text/plain; Charset=utf-8\r\n";
-    mail("admin@tld.de", "ERROR:EQDKP_INSTALLATION", "clear doc root var2",$header);
-  }
+//#####################################*
+//» Script by Daniel@guilddrive.de
+//» https://www.guilddrive.de
+//» admin@guilddrive.de
+//» 05-06-2015
+
+function clear_doc_root($subdomain){
+	$delete1 = ("/var/www/vhosts/at.guilddrive.de/$subdomain/any.file"); 
+	$delete2 = ("/var/www/vhosts/at.guilddrive.de/$subdomain/any.file");
+
+	if(!@unlink($delete1))
+		
+	if(!@unlink($delete2))
+			errormail("ERROR:EQDKP_INSTALLATION","clear doc root $subdomain");
 }
 ?>
