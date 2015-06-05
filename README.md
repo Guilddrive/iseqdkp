@@ -8,3 +8,5 @@ Bevor du das Script nutzen kannst um EQdkp Plus 2.0 zu installieren, muss im Vor
 Bitte beachte, dass die enthaltenen Dateipfade und Variablen der einzelnen Scripte im Vorfeld an deine Ordnerstruktur und Formulare angepasst werden müssen. Um diese Pfade und Variablen für dich erkennbarer zu machen, haben wir in den Scripten allgemeine Begriffe, wie beispielsweise 'var/www/vhost/domain.de/' oder '$_SESSION["var"]' genutzt, dass sollte dir das Arbeiten erleichtern.
 
 
+
+
