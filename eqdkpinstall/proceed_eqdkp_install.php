@@ -1,15 +1,25 @@
-<?php session_start();
+<?php 
+//#####################################*
+//» Script by Daniel@guilddrive.de
+//» https://guilddrive.de
+//» admin@guilddrive.de
+//» 05-06-2015
+
+session_start();
 	
 //=> AES-encryption
 require('./eqdkp_aes_class.php');
+
+//=> include ERROR-REPORTING-MAIL
+require('./error_mail_inc.php');
 	
 //=> declare vars
 $var = $_SESSION["..."]; //=> subdomain name without '.domain.de'
 $subdomain = "$var.domain.de";
 $key = $_SESSION["..."]; //=> set var for security key
 $mail = $_SESSION["..."]; //=> set var for email
-$passwd = $_SESSION["..."]; //=> set var for password
 $aminuser = $_SESSION["..."]; //=> set var for admin
+$passwd = $_SESSION["..."]; //=> set var for password
 
 //=> include functions
 require ('./set_permissions.php'); //=> set file permissions
@@ -68,7 +78,7 @@ mysqli_query($con, $sql);
 $num = mysqli_affected_rows($con);
 if ($num>0){
   mysqli_close($con);
-  echo "INSTALL COMPLET";
+  echo "INSTALL COMPLETE";
 }else{
   mysqli_close($con);
   exit("INSTALL FAIL");
