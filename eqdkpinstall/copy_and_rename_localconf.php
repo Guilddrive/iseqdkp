@@ -11,9 +11,7 @@ function copy_and_rename_localconf($var){
   $newfile = "/var/www/vhosts/domain.de/$var.domain.de/data/dkphash/eqdkp/config/localconf.php";
 			
   if (!copy($file, $newfile)) {
-    $header = "From: Error-Reporting <error@tld.de>\r\n";
-    $header .= "Content-Type: text/plain; Charset=utf-8\r\n";
-    mail("admin@tld.de", "ERROR:EQDKP_INSTALLATION", "copy and rename localconf",$header);
+    errormail("ERROR:EQDKP_INSTALLATION","copy and rename localconf $subdomain");
   }
 			
   //=> adjust copied file
