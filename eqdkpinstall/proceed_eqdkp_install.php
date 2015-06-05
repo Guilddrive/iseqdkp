@@ -5,7 +5,7 @@ require('./eqdkp.aes.class.php');
 	
 //=> declare vars
 $var = $_SESSION["var"];
-$subdomain = "$subdomain.domain.de";
+$subdomain = "$var.domain.de";
 $key = $_SESSION["eqdkpkey"];
 
 //=> include functions
