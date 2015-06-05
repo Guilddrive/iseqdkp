@@ -1,5 +1,4 @@
 <?php
-
 function extract_eqdkp_template($var){
   $zip = new ZipArchive;
   if ($zip->open('/var/www/vhosts/domain.de/eqdkp_template20.zip') === TRUE) {
@@ -11,5 +10,4 @@ function extract_eqdkp_template($var){
     mail("admin@tld.de", "ERROR:EQDKP_INSTALLATION", "extract eqdkp template",$header);
   }
 }
-
 ?>
