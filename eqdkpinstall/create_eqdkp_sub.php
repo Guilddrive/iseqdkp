@@ -8,7 +8,7 @@ define("LOGIN", "username");  //=>set API-Username
 define("PASSWD", "password"); //=>set API-Password
 define("PROTO_VER", "1.6.6.0");
 
-$subomain = $_SESSION["subdomain"];  //=> 
+$subomain = $_SESSION["subdomain"];  //=> Subdomain Var
 $proto = PROTO_VER;
 $data =<<<EOF
 <?xml version="1.0" encoding="UTF-8" ?>
