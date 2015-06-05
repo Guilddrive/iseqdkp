@@ -4,9 +4,12 @@
 require('./eqdkp_aes_class.php');
 	
 //=> declare vars
-$var = $_SESSION["var"];
+$var = $_SESSION["..."]; //=> subdomain name without '.domain.de'
 $subdomain = "$var.domain.de";
-$key = $_SESSION["eqdkpkey"];
+$key = $_SESSION["..."]; //=> set var for security key
+$mail = $_SESSION["..."]; //=> set var for email
+$passwd = $_SESSION["..."]; //=> set var for password
+$aminuser = $_SESSION["..."]; //=> set var for admin
 
 //=> include functions
 require ('./set_permissions.php'); //=> set file permissions
@@ -32,14 +35,11 @@ copy_and_rename_localconf($var); //=> run
 hash_and_rename($var); //=> run
 
 //=> encrypt email with AES
-$mail = $emailvar; //=> set var email
 $encryptionKey = md5(md5(md5($key)));
-
-//=> delcar email-adress for mysql
 $sqlmail = AesCtr::encrypt($mail, md5($encryptionKey), 256);
 
 //encrypt mysql password
-$sqlpass = md5($passwordvar); //=> set var password
+$sqlpass = md5($passwd);
 
 //=> mysql data
 $dbtype = 'mysqli';
@@ -53,7 +53,7 @@ $con = mysqli_connect($dbhost, $dbuser, $dbpass);
 mysqli_select_db($con, $dbname);
 
 //=> declare mysql-request for table _users
-$sql = "insert " . $var . "_users (user_id, username, user_password, user_lang, user_email, user_active, rules, user_style) values ('1', '" . $adminuservar . "', '" . $sqlpass . "', 'german', '" . $sqlmail . "', '1', '0', '1')"; //=> set var adminuser
+$sql = "insert " . $var . "_users (user_id, username, user_password, user_lang, user_email, user_active, rules, user_style) values ('1', '" . $aminuser . "', '" . $sqlpass . "', 'german', '" . $sqlmail . "', '1', '0', '1')"; //=> set var adminuser
 
 //=> run mysql-request for table _users
 mysqli_query($con, $sql);
