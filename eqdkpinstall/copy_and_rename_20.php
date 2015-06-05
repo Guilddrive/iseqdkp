@@ -1,8 +1,8 @@
 <?php
 	
 function copy_and_rename($var){
-  $file = "/var/www/vhosts/.domain.de/hosttemplate20.sql"; //=> mysql-template
-  $newfile = "/var/www/vhosts/.domain.de/httpdocs/docroot/sqltmp/" . $var . ".sql"; //=> filename = prefix
+  $file = "/var/www/vhosts/domain.de/hosttemplate20.sql"; //=> mysql-template
+  $newfile = "/var/www/vhosts/domain.de/httpdocs/docroot/sqltmp/" . $var . ".sql"; //=> filename = prefix
 			
   if (!copy($file, $newfile)) {
     $header = "From: Error-Reporting <error@tld.de>\r\n";
@@ -13,7 +13,7 @@ function copy_and_rename($var){
   //=> adjust prefix
   $search = eqdkp20_;
   $replace = "" . $sqlname . "_"; //MySQL-Prefix = Subdomain-Prefix
-  $file = "/var/www/vhosts/.domain.de/httpdocs/docroot/sqltmp/" . $var . ".sql"; //=> filename = prefix
+  $file = "/var/www/vhosts/domain.de/httpdocs/docroot/sqltmp/" . $var . ".sql"; //=> filename = prefix
 
 $content = file_get_contents($file);
 $content = str_replace($search, $replace, $content);
