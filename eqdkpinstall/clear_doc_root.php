@@ -1,6 +1,6 @@
 <?php
 
-function clear_doc_root($dkpadress){
+function clear_doc_root($var){
   $delete1 = ("/var/www/vhosts/at.guilddrive.de/$dkpadress/rock.css");
   $delete2 = ("/var/www/vhosts/at.guilddrive.de/$dkpadress/index.html");
   if(!@unlink($delete1)){
