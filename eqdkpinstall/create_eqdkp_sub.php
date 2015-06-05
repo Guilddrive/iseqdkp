@@ -45,7 +45,6 @@ if($subdomain_status != error){
 	echo "<img width=\"11\" height=\"11\" src=\"../images/ok.png\"/>";
 	}else
 	if($subdomain_errcode == 1007){
-	  	echo $subdomain_id;
 	  	exit("&nbsp;<img width=\"11\" height=\"11\" src=\"../images/ok.png\"/>");
 		}else
 		exit("$subdomain_errcode: $subdomain_errtext");
