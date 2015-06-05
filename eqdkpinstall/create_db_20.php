@@ -1,24 +1,22 @@
 <?php
-function import_eqdkp_db($var){
+//#####################################*
+//» Script by Daniel@guilddrive.de
+//» https://www.guilddrive.de
+//» admin@guilddrive.de
+//» 05-06-2015
 
+function import_eqdkp_db($dbname, $dbuser, $dbpass){
 	$dbhost = 'localhost';
-	$dbuser = 'dbuser';
-	$dbname = "$var";
-	$dbpass = 'password';
-	$dbimportfilename ='/var/www/vhosts/domain.de/httpdocs/docroot/sqltmp/' . $var . '.sql';
-  
-	//=> import mysql-template and request it
-	$command='mysql -h' .$dbhost .' -u' .$dbuser .' -p' .$dbpass .' ' .$dbname .' < ' .$dbimportfilename;
+	$mysqlImportFilename ='/var/www/vhosts/at.guilddrive.de/httpdocs/hostingV4/sqltmp/'.$dbname.'.sql';
+	$command='mysql -h' .$dbhost .' -u' .$dbuser .' -p' .$dbpass .' ' .$dbname .' < ' .$mysqlImportFilename; //=>Importiert die Datenbank und gibt Request als ECHO aus
 	$output=array();
 	exec($command,$output,$worked);
-	switch($worked){
-	case 0:
-		break;
-	case 1:
-		$header = "From: Error-Reporting <email@tld.de>\r\n";
-		$header .= "Content-Type: text/plain; Charset=utf-8\r\n";
-		mail("admin@tld.de", "ERROR:EQDKP_INSTALLATION", "import eqdkp db",$header);
-	  	break;
-	}
+		switch($worked){
+		case 0:
+			break;
+		case 1:
+			errormail("ERROR:EQDKP_INSTALLATION","create db 20<br>$dbname<br>$dbuser<br>$dbpass");
+			break;
+		}
 }
 ?> 
