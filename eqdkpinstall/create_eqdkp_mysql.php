@@ -9,13 +9,14 @@ define("PASSWD", "password"); //=> set API-Password
 define("PROTO_VER", "1.6.6.0");
 
 $mysql = $_SESSION["mysql"]; //=> set MySQL-Database name
+$sub_id = '1'; //=> Subdomain ID of the Webspace in Plesk
 $proto = PROTO_VER;
 $data =<<<EOF
 <?xml version="1.0" encoding="UTF-8" ?>
 <packet version="$proto">
 <database>
     <add-db>
-     <webspace-id>1</webspace-id> <!-- Plesk Subdomain-ID -->
+     <webspace-id>$sub_id</webspace-id>
       <name>$mysql</name>
      <type>mysql</type>
     </add-db>
