@@ -10,7 +10,7 @@ $dbpass = 'password'; //=>set mysql password
 $table_prefix = "" . $dkpname . "_";
 	
 $encryptionKey = md5(md5(md5($key)));
-$dir = "/var/www/vhosts/.domain.de/$subdomain";
+$dir = "/var/www/vhosts/domain.de/$subdomain";
 	
 $fp = @fopen("$dir/config.php","w");
   if (!$fp){
