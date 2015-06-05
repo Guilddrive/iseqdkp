@@ -1,5 +1,4 @@
 <?php session_start();
-require('./eqdkp.check.php'); //=> Check if an EQdkp Hosting is still existing
 	
 //=> AES-encryption
 require('./eqdkp.aes.class.php');
