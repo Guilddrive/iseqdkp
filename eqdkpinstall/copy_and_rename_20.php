@@ -1,7 +1,7 @@
 <?php
 	
 function copy_and_rename($var){
-  $file = "/var/www/vhosts/at.guilddrive.de/hosttemplate20.sql"; //=> mysql-template
+  $file = "/var/www/vhosts/.domain.de/hosttemplate20.sql"; //=> mysql-template
   $newfile = "/var/www/vhosts/.domain.de/httpdocs/docroot/sqltmp/" . $var . ".sql"; //=> filename = prefix
 			
   if (!copy($file, $newfile)) {
