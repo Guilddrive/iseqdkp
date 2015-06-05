@@ -1,14 +1,13 @@
 <?php session_start();
-	require('./eqdkp.check.php'); //=> Check if an EQdkp Hosting is still existing
 
-define("HOST", "12.34.567.89"); //=> set Server ID
-define("PORT", 1234); //=set Server PORT
-define("PATH", "enterprise/control/agent.php"); //=>set Plesk API-Path
-define("LOGIN", "username");  //=>set API-Username
-define("PASSWD", "password"); //=>set API-Password
-define("PROTO_VER", "1.6.6.0");
+define("HOST", "--.--.---.--"); //=> set server IP
+define("PORT", "----"); //= set server PORT
+define("PATH", "enterprise/control/agent.php"); //=> set plesk api-path
+define("LOGIN", "username");  //=> set api-username
+define("PASSWD", "password"); //=> set api-Password
+define("PROTO_VER", "1.6.6.0"); //=> set protocol version
 
-$subomain = $_SESSION["subdomain"];  //=> Subdomain Var
+$subomain = $_SESSION["subdomain"];  //=> declare subdomain
 $proto = PROTO_VER;
 $data =<<<EOF
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -43,8 +42,7 @@ $subdomain_id = $xml->subdomain->add->result->id;
 
 if($subdomain_status != error){
 	echo "<img width=\"11\" height=\"11\" src=\"../images/ok.png\"/>";
-	}else
-	if($subdomain_errcode == 1007){
+	}else 	if($subdomain_errcode == 1007){
 	  	exit("&nbsp;<img width=\"11\" height=\"11\" src=\"../images/ok.png\"/>");
 		}else
 		exit("$subdomain_errcode: $subdomain_errtext");
@@ -52,8 +50,7 @@ if($subdomain_status != error){
 return strlen($data);
 }
 
-function sendCommand()
-{
+function sendCommand(){
 $url = "https://" . HOST . ":" . PORT . "/" . PATH;
 
 $headers = array(
