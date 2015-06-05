@@ -1,23 +1,23 @@
 <?php
-//=> set permissions 0644
+//#####################################*
+//» Script by Daniel@guilddrive.de
+//» https://guilddrive.de
+//» admin@guilddrive.de
+//» 05-06-2015
+
 function set_permission_0644($var){
-$file = "$var";
-$perm = 0644;
-  if(!@chmod($file, $perm) == true) {
-    $header = "From: Error-Reporting <email@tld.de>\r\n";
-    $header .= "Content-Type: text/plain; Charset=utf-8\r\n";
-    mail("admin@tld.de", "ERROR:EQDKP_INSTALLATION", "set permissions to 0644",$header);
-  }
+	$file = "$var";
+	$perm = 0644;
+	if(!@chmod($file, $perm) == true) {
+		errormail("ERROR:EQDKP_INSTALLATION","set permissions 0644 $var");
+	}
 }
 	
-//=> set permissions 0777
 function set_permission_0777($var){
-$file = "$var";
-$perm = 0777;
-  if(!@chmod($file, $perm) == true) {
-    $header = "From: Error-Reporting <email@tld.de>\r\n";
-    $header .= "Content-Type: text/plain; Charset=utf-8\r\n";
-    mail("admin@tld.de", "ERROR:EQDKP_INSTALLATION", "set permissions to 0777",$header);
-  }
+	$file = "$var";
+	$perm = 0777;
+	if(!@chmod($file, $perm) == true) {
+		errormail("ERROR:EQDKP_INSTALLATION","set permissions 0777 $var");
+	}
 }
 ?>
