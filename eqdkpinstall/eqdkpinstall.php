@@ -6,10 +6,6 @@ function iseqdkp()
 	create_eqdkp();
 }
 
-function refresh(){
-window.setTimeout('window.location = "https://www.guilddrive.de"',5000);
-}
-
 function create_eqdkp_sub()
 {
     if (window.XMLHttpRequest)
