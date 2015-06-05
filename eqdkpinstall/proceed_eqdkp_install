@@ -2,8 +2,7 @@
 require('./eqdkp.check.php'); //=> Check if an EQdkp Hosting is still existing
 	
 //=> AES-encryption
-require('./eqdkp.aes.class.php');    
-require('./error.mail.inc.php');
+require('./eqdkp.aes.class.php');
 	
 //=> declare vars
 $var = $_SESSION["var"];
