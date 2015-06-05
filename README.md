@@ -11,6 +11,6 @@ System du nutzt um deinen Server zu administrieren. Wir arbeiten mit der API-Sch
 umfassende Anleitung dazu findest du unter "http://download1.parallels.com/Plesk/Doc/de-DE/online/plesk-api-rpc/"
 
 Bitte beachte, das die Dateipfade der verschiedenen Scripte im Vorfeld an deine Ordnerstruktur angepasst werden müssen. 
-Um diese für dich erkennbarer zu machen haben wir in den Scripten allgemeine Begriffe, wie z. B. "../vhost/domain.de/", genutzt.
+Um diese für dich erkennbarer zu machen haben wir in den Scripten allgemeine Begriffe, wie z. B. "var/www/vhost/domain.de/", genutzt.
 
 
