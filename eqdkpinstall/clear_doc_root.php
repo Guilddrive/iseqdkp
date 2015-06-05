@@ -1,5 +1,4 @@
 <?php
-
 function clear_doc_root($var){
   $delete1 = ("/var/www/vhosts/domain.de/$var/a_new_webspace_logo.png");
   $delete2 = ("/var/www/vhosts/domain.de/$var/a_new_webspace_index.php");
@@ -14,5 +13,4 @@ function clear_doc_root($var){
     mail("admin@tld.de", "ERROR:EQDKP_INSTALLATION", "clear doc root var2",$header);
   }
 }
-
 ?>
