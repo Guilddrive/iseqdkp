@@ -71,7 +71,7 @@ if ($num>0){
   echo "INSTALL COMPLET";
 }else{
   mysqli_close($con);
-  exit("INSTALL FAILED");
+  exit("INSTALL FAIL");
 }
 
 ?>
