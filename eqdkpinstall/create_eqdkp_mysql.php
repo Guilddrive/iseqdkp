@@ -8,14 +8,14 @@ define("LOGIN", "username"); //=> set API-Username
 define("PASSWD", "password"); //=> set API-Password
 define("PROTO_VER", "1.6.6.0");
 
-$mysql = $_SESSION["mysql"];
+$mysql = $_SESSION["mysql"]; //=> set MySQL-Database name
 $proto = PROTO_VER;
 $data =<<<EOF
 <?xml version="1.0" encoding="UTF-8" ?>
 <packet version="$proto">
 <database>
     <add-db>
-     <webspace-id>1</webspace-id> //=> Plesk Subdomain-ID
+     <webspace-id>1</webspace-id> <!-- Plesk Subdomain-ID -->
       <name>$mysql</name>
      <type>mysql</type>
     </add-db>
