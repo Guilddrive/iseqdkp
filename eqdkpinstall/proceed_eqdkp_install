@@ -11,13 +11,13 @@ $subdomain = "$subdomain.domain.de";
 $key = $_SESSION["eqdkpkey"];
 
 //=> include functions
-require ('./set_permissions.php');	//=> set file permissions
-require ('./clear_doc_root.php'); 	//=> clear doc-root
-require ('./extract_template_20.php');	//=> Unzip Data - Important! The eqdkp_template.zip mustn't contain the "config.php and localconf.php". The folder "data/md5(mysql_prefix+databasename)/" must be renamed into "dkphash".
-require ('./create_config.php');	//=> creating config.php
-require ('./copy_and_rename_20.php');	//=> adjust .SQL-Dumps - searching and adjusing prefixes of the mysql-tables
-require ('./create_db_20.php');		//=> importing mysql template
-require ('./copy_and_rename_localconf.php');	//=> adjusting localconf.php - for searching and adjusting mysql-prefix - will be copyied to "data/md5(mysql_prefix+datebasename)/eqdkp/config"
+require ('./set_permissions.php'); //=> set file permissions
+require ('./clear_doc_root.php'); //=> clear doc-root
+require ('./extract_template_20.php'); //=> Unzip Data - Important! The eqdkp_template.zip mustn't contain the "config.php and localconf.php". The folder "data/md5(mysql_prefix+databasename)/" must be renamed into "dkphash".
+require ('./create_config.php'); //=> creating config.php
+require ('./copy_and_rename_20.php'); //=> adjust .SQL-Dumps - searching and adjusing prefixes of the mysql-tables
+require ('./create_db_20.php');	//=> importing mysql template
+require ('./copy_and_rename_localconf.php'); //=> adjusting localconf.php - for searching and adjusting mysql-prefix - will be copyied to "data/md5(mysql_prefix+datebasename)/eqdkp/config"
 require ('./hash.and.rename.php'); //=> creating hash with mysql_prefix and databasename and adjusts the folder data/dkphash
 
 //=> run functions
