@@ -1,12 +1,9 @@
 <script>
-function installabo()
+function iseqdkp()
 {
 	create_eqdkp_sub();
 	create_eqdkp_mysql();
 	create_eqdkp();
-	finish();
-	destroy();
-	refresh();
 }
 
 function refresh(){
@@ -82,49 +79,4 @@ function create_eqdkp()
     xmlhttp.send();
 }
 
-function destroy()
-{
-    if (window.XMLHttpRequest)
-    {
-        // AJAX nutzen mit IE7+, Chrome, Firefox, Safari, Opera
-        xmlhttp=new XMLHttpRequest();
-    }
-    else
-    {
-        // AJAX mit IE6, IE5
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    xmlhttp.onreadystatechange=function()
-    {
-        if (xmlhttp.readyState==4 && xmlhttp.status==200)
-        {
-            document.getElementById("destroy").innerHTML=xmlhttp.responseText;
-        }
-    }
-    xmlhttp.open("GET","./eqdkp.finish.php",false);
-    xmlhttp.send();
-}
-
-function finish()
-{
-    if (window.XMLHttpRequest)
-    {
-        // AJAX nutzen mit IE7+, Chrome, Firefox, Safari, Opera
-        xmlhttp=new XMLHttpRequest();
-    }
-    else
-    {
-        // AJAX mit IE6, IE5
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    xmlhttp.onreadystatechange=function()
-    {
-        if (xmlhttp.readyState==4 && xmlhttp.status==200)
-        {
-            document.getElementById("finish").innerHTML=xmlhttp.responseText;
-        }
-    }
-    xmlhttp.open("GET","./add.eqdkp.subscription.php",false);
-    xmlhttp.send();
-}
 </script>
