@@ -1,15 +1,14 @@
 <?php session_start();
-require('./eqdkp.check.php'); //=> Check if an EQdkp Hosting is still existing
 
-define("HOST", "12.34.567.89"); //=> set SERVER ID
-define("PORT", 1234); //=> set PORT
-define("PATH", "enterprise/control/agent.php"); //=> set Plesk API-Path
-define("LOGIN", "username"); //=> set API-Username
-define("PASSWD", "password"); //=> set API-Password
-define("PROTO_VER", "1.6.6.0");
+define("HOST", "--.--.---.--"); //=> set server IP
+define("PORT", "----"); //=> set PORT
+define("PATH", "enterprise/control/agent.php"); //=> set plesk api-path
+define("LOGIN", "username"); //=> set api-username
+define("PASSWD", "password"); //=> set api-password
+define("PROTO_VER", "1.6.6.0"); //=> set protocol version
 
-$mysql = $_SESSION["mysql"]; //=> set MySQL-Database name
-$sub_id = '1'; //=> Subdomain ID of the Webspace in Plesk
+$mysql = $_SESSION["mysql"]; //=> set mysql-database name
+$sub_id = '1'; //=> plesk webspace ID from created subdomain
 $proto = PROTO_VER;
 $data =<<<EOF
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -27,20 +26,14 @@ EOF;
 function write_callback($ch, $data){
 $xml = simplexml_load_string($data);
 $mysql_status = $xml->database->{'add-db'}->result->status;
-$mysql_id = $xml->database->{'add-db'}->result->id;
 
 if($mysql_status != error){
-	$subdomain = $_SESSION["subdomain"];
-	$con = mysqli_connect("localhost","mysqluser",'mysqlpasswd');
-	mysqli_select_db($con, "guilddrive_v4");
-	$sql ="insert aktiv_eqdkp_subscription (mysql_id, subdomain) values ('$mysql_id','$subdomain')";
-	mysqli_query($con, $sql);
 	exit("&nbsp;<img width=\"11\" height=\"11\" src=\"../images/ok.png\"/>");
-}else{
+	}else{
 	$mysql_errcode = $xml->database->{'add-db'}->result->errcode;
 	$mysql_errtext = $xml->database->{'add-db'}->result->errtext;
 	exit("$mysql_errcode: $mysql_errtext");
-}
+	}
 		
 return strlen($data);
 }
