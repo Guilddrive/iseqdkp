@@ -68,10 +68,10 @@ mysqli_query($con, $sql);
 $num = mysqli_affected_rows($con);
 if ($num>0){
   mysqli_close($con);
-  echo trim("<img width=\"11\" height=\"11\" src=\"../images/ok.png\" />");
+  echo "INSTALL COMPLET";
 }else{
   mysqli_close($con);
-  exit("<img width=\"11\" height=\"11\" src=\"../images/no.png\" />");
+  exit("INSTALL FAILED");
 }
 
 ?>
