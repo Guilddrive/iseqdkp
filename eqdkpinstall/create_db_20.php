@@ -1,5 +1,4 @@
 <?php
-
 function import_eqdkp_db($var){
 
 	$dbhost = 'localhost';
@@ -22,5 +21,4 @@ function import_eqdkp_db($var){
 	  	break;
 	}
 }
-
 ?> 
