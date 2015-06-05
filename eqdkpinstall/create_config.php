@@ -4,7 +4,7 @@ function create_eqdkp_config($var, $subdomain, $key){
 
 $dbtype = 'mysqli';
 $dbhost = 'localhost';
-$dbuser = 'hosttemplate';
+$dbuser = 'dbuser';
 $dbname = "$var";
 $dbpass = 'password'; //=>set mysql password
 $table_prefix = "" . $dkpname . "_";
