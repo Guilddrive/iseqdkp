@@ -1,7 +1,7 @@
 <?php
 //#####################################*
 //» Script by Daniel@guilddrive.de
-//» https://www.guilddrive.de
+//» https://guilddrive.de
 //» admin@guilddrive.de
 //» 05-06-2015
 
