@@ -21,17 +21,17 @@ require ('./copy_and_rename_localconf.php');	//=> adjusting localconf.php - for 
 require ('./hash.and.rename.php'); //=> creating hash with mysql_prefix and databasename and adjusts the folder data/dkphash
 
 //=> run functions
-set_permission_0777("/var/www/vhosts/at.guilddrive.de/$dkpadress"); //=> run
-clear_doc_root($dkpadress); //=> run
-extract_eqdkp_template($dkpadress); //=> run
-create_eqdkp_config($dkpname, $dkpadress, $key); //=> run
-copy_and_rename($dkpname); //=> run
-set_permission_0644("/var/www/vhosts/at.guilddrive.de/$dkpadress/config.php"); //=> run
-set_permission_0777("/var/www/vhosts/at.guilddrive.de/$dkpadress/data"); //=> run
-import_eqdkp_db($dkpname); //=> run
-clear_doc_root($dkpadress); //=> run
-copy_and_rename_localconf($dkpname); //=> run
-hashandrename($dkpname); //=> run
+set_permission_0777("/var/www/vhosts/at.guilddrive.de/$subdomain"); //=> run
+clear_doc_root($subdomain); //=> run
+extract_eqdkp_template($subdomain); //=> run
+create_eqdkp_config($var, $subdomain, $key); //=> run
+copy_and_rename($var); //=> run
+set_permission_0644("/var/www/vhosts/at.guilddrive.de/$subdomain/config.php"); //=> run
+set_permission_0777("/var/www/vhosts/at.guilddrive.de/$subdomain/data"); //=> run
+import_eqdkp_db($var); //=> run
+clear_doc_root($subdomain); //=> run
+copy_and_rename_localconf($var); //=> run
+hashandrename($var); //=> run
 
 //=> encrypt email with AES
 $mail = $emailvar; //=> set var email
