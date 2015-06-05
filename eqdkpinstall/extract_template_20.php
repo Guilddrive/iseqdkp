@@ -2,7 +2,7 @@
 
 function extract_eqdkp_template($var){
   $zip = new ZipArchive;
-  if ($zip->open('/var/www/vhosts/.domain.de/eqdkp_template20.zip') === TRUE) {
+  if ($zip->open('/var/www/vhosts/domain.de/eqdkp_template20.zip') === TRUE) {
     $zip->extractTo("/var/www/vhosts/at.guilddrive.de/$var/");
     $zip->close();
   }else{
