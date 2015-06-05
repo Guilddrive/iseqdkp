@@ -43,14 +43,14 @@ $sqlmail = AesCtr::encrypt($mail, md5($encryptionKey), 256);
 //encrypt mysql password
 $sqlpass = md5($passwordvar); //=> set var password
 
-//=> connect to mysql
+//=> mysql data
 $dbtype = 'mysqli';
 $dbhost = 'localhost';
 $dbuser = 'hosttemplate';
 $dbname = "mysql_username";
 $dbpass = 'mysql_passwd';
 
-//MySQL-Verbindung herstellen
+//=> mysql connect
 $con = mysqli_connect($dbhost, $dbuser, $dbpass);
 mysqli_select_db($con, $dbname);
 
