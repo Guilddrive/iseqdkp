@@ -16,7 +16,7 @@ $data =<<<EOF
 <subdomain>
         <add>
             <parent>.domain.de</parent>
-            <name>$sub</name>
+            <name>$subdomain</name>
             <property>
                <name>www_root</name>
                <value>/$subdomain.domain.de</value>
