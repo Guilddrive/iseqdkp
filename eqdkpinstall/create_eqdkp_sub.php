@@ -1,7 +1,7 @@
 <?php session_start();
 	require('./eqdkp.check.php'); //=> Check if an EQdkp Hosting is still existing
 
-define("HOST", "12.23.567.89"); //=> set Server ID
+define("HOST", "12.34.567.89"); //=> set Server ID
 define("PORT", 1234); //=set Server PORT
 define("PATH", "enterprise/control/agent.php"); //=>set Plesk API-Path
 define("LOGIN", "username");  //=>set API-Username
