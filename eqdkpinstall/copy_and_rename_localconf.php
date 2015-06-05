@@ -1,5 +1,10 @@
 <?php
-//=> important notice: before hashing md5(mysql_prefix+databasename) the folder musst be called dkphash!
+//#####################################*
+//» Script by Daniel@guilddrive.de
+//» https://guilddrive.de
+//» admin@guilddrive.de
+//» 05-06-2015
+//» important notice: before hashing md5(mysql_prefix+databasename) the folder musst be called dkphash!
 
 function copy_and_rename_localconf($var){
   $file = "/var/www/vhosts/domain.de/localconf.gd"; //=> file-template
