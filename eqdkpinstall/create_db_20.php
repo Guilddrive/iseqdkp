@@ -14,12 +14,12 @@ function import_eqdkp_db($var){
   exec($command,$output,$worked);
   switch($worked){
   case 0:
-  break;
+  	break;
   case 1:
-  
-  
-  
-  break;
+	$header = "From: Error-Reporting <email@tld.de>\r\n";
+	$header .= "Content-Type: text/plain; Charset=utf-8\r\n";
+	mail("admin@tld.de", "ERROR:EQDKP_INSTALLATION", "import eqdkp db",$header);
+  	break;
   }
 }
 
