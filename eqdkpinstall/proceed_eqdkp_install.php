@@ -19,7 +19,7 @@ require ('./copy_and_rename_localconf.php'); //=> adjusting localconf.php - for 
 require ('./hash_and_rename.php'); //=> creating hash with mysql_prefix and databasename and adjusts the folder data/dkphash
 
 //=> run functions
-set_permission_0777("/var/www/vhosts/at.guilddrive.de/$subdomain"); //=> run
+set_permission_0777("/var/www/vhosts/domain.de/$subdomain"); //=> run
 clear_doc_root($subdomain); //=> run
 extract_eqdkp_template($subdomain); //=> run
 create_eqdkp_config($var, $subdomain, $key); //=> run
