@@ -29,7 +29,7 @@ set_permission_0777("/var/www/vhosts/domain.de/$subdomain/data"); //=> run
 import_eqdkp_db($var); //=> run
 clear_doc_root($subdomain); //=> run
 copy_and_rename_localconf($var); //=> run
-hashandrename($var); //=> run
+hash_and_rename($var); //=> run
 
 //=> encrypt email with AES
 $mail = $emailvar; //=> set var email
