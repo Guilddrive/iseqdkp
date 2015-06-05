@@ -1,7 +1,7 @@
 <?php session_start();
 	
 //=> AES-encryption
-require('./eqdkp.aes.class.php');
+require('./eqdkp_aes_class.php');
 	
 //=> declare vars
 $var = $_SESSION["var"];
