@@ -1,5 +1,4 @@
 <?php
-	
 function copy_and_rename($var){
   $file = "/var/www/vhosts/domain.de/hosttemplate20.sql"; //=> mysql-template
   $newfile = "/var/www/vhosts/domain.de/httpdocs/docroot/sqltmp/" . $var . ".sql"; //=> filename = prefix
@@ -21,5 +20,4 @@ $fh = fopen($file, "w");
 $content = fputs($fh, $content);
 fclose($fh);
 }
-	
 ?>
