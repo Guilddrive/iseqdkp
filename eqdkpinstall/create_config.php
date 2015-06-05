@@ -1,11 +1,11 @@
 <?php
-function create_eqdkp_config($var, $subdomain, $key){
+function create_eqdkp_config($var, $subdomain, $key, $passwd){
 
 $dbtype = 'mysqli';
 $dbhost = 'localhost';
-$dbuser = 'dbuser';
+$dbuser = "$var";
 $dbname = "$var";
-$dbpass = 'password'; //=>set mysql password
+$dbpass = "$password";
 $table_prefix = "" . $var . "_";
 	
 $encryptionKey = md5(md5(md5($key)));
