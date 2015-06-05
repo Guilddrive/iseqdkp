@@ -1,4 +1,10 @@
 <?php
+//#####################################*
+//» Script by Daniel@guilddrive.de
+//» https://guilddrive.de
+//» admin@guilddrive.de
+//» 05-06-2015
+
 function create_eqdkp_config($var, $subdomain, $key, $passwd){
 
 $dbtype = 'mysqli';
@@ -13,10 +19,8 @@ $dir = "/var/www/vhosts/domain.de/$subdomain";
 	
 $fp = @fopen("$dir/config.php","w");
   if (!$fp){
-	  $header = "From: Error-Reporting <email@tld.de>\r\n";
-	  $header .= "Content-Type: text/plain; Charset=utf-8\r\n";
-	  mail("admin@tld.de", "ERROR:EQDKP_INSTALLATION", "create config $subdomain",$header);
-	  exit;
+	errormail("ERROR:EQDKP_INSTALLATION","create config $var<br>$subdomain<br>$key<br>$passwd");
+	exit;
   }
 
 //=> structur          ftp-HOST                  ftp-PORT         ftp-USER         ftp-PASSWORD    ftp-USERNAME      ftp-USE 0    /1   database-TYPE	      mysql-HOST             database-NAME          database-USER          database-PASSWORD      database-PREFIX                          encryption-KEY                     define installe TRUE/FALSE
