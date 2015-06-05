@@ -6,7 +6,9 @@ function extract_eqdkp_template($var){
     $zip->extractTo("/var/www/vhosts/at.guilddrive.de/$dkpadress/");
     $zip->close();
   }else{
-    errormail("ERROR:EQDKP_INSTALLATION","extract_template_20.php");
+    $header = "From: Error-Reporting <email@tld.de>\r\n";
+    $header .= "Content-Type: text/plain; Charset=utf-8\r\n";
+    mail("admin@tld.de", "ERROR:EQDKP_INSTALLATION", "extract eqdkp template",$header);
   }
 }
 
