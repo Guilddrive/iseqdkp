@@ -2,11 +2,11 @@
 
 function import_eqdkp_db($var){
 
-  $mysqlDatabaseName ="$dbname";
-  $mysqlUserName ='hosttemplate';
+  $mysqlDatabaseName ="$var";
+  $mysqlUserName ='dbuser';
   $mysqlPassword ='password';
   $mysqlHostName ='localhost';
-  $mysqlImportFilename ='/var/www/vhosts/.domain.de/httpdocs/docroot/sqltmp/' . $var . '.sql';
+  $mysqlImportFilename ='/var/www/vhosts/domain.de/httpdocs/docroot/sqltmp/' . $var . '.sql';
 		
   //=> import mysql-template and request ist
   $command='mysql -h' .$mysqlHostName .' -u' .$mysqlUserName .' -p' .$mysqlPassword .' ' .$mysqlDatabaseName .' < ' .$mysqlImportFilename;
