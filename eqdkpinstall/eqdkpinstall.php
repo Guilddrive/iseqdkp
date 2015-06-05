@@ -10,7 +10,7 @@ function installabo()
 }
 
 function refresh(){
-window.setTimeout('window.location = "https://www.guilddrive.de"',5000); //Muss in der Alpha-Version auf www.guilddrive.de gesetzt werden.
+window.setTimeout('window.location = "https://www.guilddrive.de"',5000);
 }
 
 function create_eqdkp_sub()
