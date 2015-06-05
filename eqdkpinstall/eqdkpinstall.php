@@ -78,7 +78,7 @@ function create_eqdkp()
             document.getElementById("create_eqdkp").innerHTML=xmlhttp.responseText;
         }
     }
-    xmlhttp.open("GET","./install_free_eqdkp_new.php",false);
+    xmlhttp.open("GET","./proceed_eqdkp_install.php",false);
     xmlhttp.send();
 }
 
