@@ -1,3 +1,10 @@
+//#####################################*
+//» Script by Daniel@guilddrive.de
+//» https://guilddrive.de
+//» admin@guilddrive.de
+//» 05-06-2015
+//» example javascript to verify strings before you send it to the form 
+
 function checkForm(form)
 {
     if(form.adminlogin.value == "") {
