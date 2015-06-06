@@ -83,4 +83,5 @@ if ($num>0){
   exit("INSTALL FAIL");
 }
 
+session_destroy();
 ?>
