@@ -62,7 +62,7 @@ $con = mysqli_connect($dbhost, $dbuser, $dbpass);
 mysqli_select_db($con, $dbname);
 
 //=> escape $adminuser for mysql-request
-$sqladmin = mysqli_real_escape_string($adminuser);
+$sqladmin = mysqli_real_escape_string($con, $adminuser);
 
 //=> declare mysql-request for table _users
 $sql = "insert " . $var . "_users (user_id, username, user_password, user_lang, user_email, user_active, rules, user_style) values ('1', '" . $sqladmin . "', '" . $md5passwd . "', 'german', '" . $sqlmail . "', '1', '0', '1')";
