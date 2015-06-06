@@ -510,7 +510,7 @@ INSERT INTO `eqdkp20_config` (`config_name`, `config_plugin`, `config_value`) VA
 ('pk_lastraid', 'core', '1'),
 ('pk_maintenance_mode', 'core', '0'),
 ('pk_newsloot_limit', 'core', 'all'),
-('plus_version', 'core', '2.0.2.0'),
+('plus_version', 'core', '2.0.3.0'),
 ('prefix', 'pdc', 'eqdkp20_'),
 ('round_activate', 'core', '1'),
 ('round_precision', 'core', '2'),
