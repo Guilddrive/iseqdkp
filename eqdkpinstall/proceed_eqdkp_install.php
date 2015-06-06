@@ -14,12 +14,14 @@ require('./eqdkp_aes_class.php');
 require('./error_mail_inc.php');
 	
 //=> declare vars
-$var = $_SESSION["..."]; //=> subdomain name without '.domain.de'
+$var = $_SESSION["..."]; //=> !-->important: this must be the name of the database, database-user, mysql_prefix and subdomain without tld<--!
 $subdomain = "$var.domain.de";
-$key = $_SESSION["..."]; //=> set var for security key
-$mail = $_SESSION["..."]; //=> set var for email
-$aminuser = $_SESSION["..."]; //=> set var for admin
-$passwd = $_SESSION["..."]; //=> set var for password
+$key = $_SESSION["..."]; //=> set var for security key of eqdkp
+$mail = $_SESSION["..."]; //=> set var for user-email
+$aminuser = $_SESSION["..."]; //=> set var for eqdkp admin-login
+$passwd = $_SESSION["..."]; //=> set var for eqdkp admin-password
+$md5passwd = md5($passwd); //=> hash the password for mysql request and use it also for the database-user !-->important: you must also create the database-user with this md5 password<--!
+
 
 //=> include functions
 require ('./set_permissions.php'); //=> set file permissions
@@ -35,11 +37,11 @@ require ('./hash_and_rename.php'); //=> creating hash with mysql_prefix and data
 set_permission_0777("/var/www/vhosts/domain.de/$subdomain"); //=> run
 clear_doc_root($subdomain); //=> run
 extract_eqdkp_template($subdomain); //=> run
-create_eqdkp_config($var, $subdomain, $key, $passwd); //=> run
+create_eqdkp_config($var, $subdomain, $key, $md5passwd); //=> run
 copy_and_rename($var); //=> run
 set_permission_0644("/var/www/vhosts/domain.de/$subdomain/config.php"); //=> run
 set_permission_0777("/var/www/vhosts/domain.de/$subdomain/data"); //=> run
-import_eqdkp_db($var, $var, $passwd); //=> run
+import_eqdkp_db($var, $var, $md5passwd); //=> run
 clear_doc_root($subdomain); //=> run
 copy_and_rename_localconf($var); //=> run
 hash_and_rename($var); //=> run
@@ -48,22 +50,19 @@ hash_and_rename($var); //=> run
 $encryptionKey = md5(md5(md5($key)));
 $sqlmail = AesCtr::encrypt($mail, md5($encryptionKey), 256);
 
-//encrypt mysql password
-$sqlpass = md5($passwd);
-
 //=> mysql data
 $dbtype = 'mysqli';
 $dbhost = 'localhost';
-$dbuser = 'dbuser';
-$dbname = "mysql-username";
-$dbpass = 'mysql-passwd';
+$dbuser = $var;
+$dbname = $var;
+$dbpass = $md5passwd;
 
 //=> mysql connect
 $con = mysqli_connect($dbhost, $dbuser, $dbpass);
 mysqli_select_db($con, $dbname);
 
 //=> declare mysql-request for table _users
-$sql = "insert " . $var . "_users (user_id, username, user_password, user_lang, user_email, user_active, rules, user_style) values ('1', '" . $aminuser . "', '" . $sqlpass . "', 'german', '" . $sqlmail . "', '1', '0', '1')"; //=> set var adminuser
+$sql = "insert " . $var . "_users (user_id, username, user_password, user_lang, user_email, user_active, rules, user_style) values ('1', '" . $aminuser . "', '" . $md5passwd . "', 'german', '" . $sqlmail . "', '1', '0', '1')"; //=> set var adminuser
 
 //=> run mysql-request for table _users
 mysqli_query($con, $sql);
