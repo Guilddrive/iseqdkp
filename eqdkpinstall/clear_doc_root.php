@@ -6,8 +6,8 @@
 //» 05-06-2015
 
 function clear_doc_root($subdomain){
-	$delete1 = ("/var/www/vhosts/at.guilddrive.de/$subdomain/any.file"); 
-	$delete2 = ("/var/www/vhosts/at.guilddrive.de/$subdomain/any.file");
+	$delete1 = ("/var/www/vhosts/domain.de/$subdomain/any.file"); 
+	$delete2 = ("/var/www/vhosts/domain.de/$subdomain/any.file");
 
 	if(!@unlink($delete1))
 		
