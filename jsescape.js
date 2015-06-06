@@ -7,15 +7,15 @@
 
 function checkForm(form)
 {
-    if(form.adminlogin.value == "") {
+    if(form.adminuser.value == "") {
       alert("You forgot to specify a username for the admin account!");
-      form.adminlogin.focus();
+      form.adminuser.focus();
       return false;
     }
     re = /^\w+$/;
-    if(!re.test(form.adminlogin.value)) {
+    if(!re.test(form.adminuser.value)) {
       alert("The user name can only contain letters, numbers and underscores!");
-      form.adminlogin.focus();
+      form.adminuser.focus();
       return false;
     }
 
@@ -25,7 +25,7 @@ function checkForm(form)
         form.passwd.focus();
         return false;
       }
-      if(form.passwd.value == form.adminlogin.value) {
+      if(form.passwd.value == form.adminuser.value) {
         alert("The password may not match the user name!");
         form.passwd.focus();
         return false;
@@ -43,7 +43,7 @@ function checkForm(form)
         form.eqdkpkey.focus();
         return false;
       }
-      if(form.eqdkpkey.value == form.adminlogin.value) {
+      if(form.eqdkpkey.value == form.adminuser.value) {
         alert("The encryption key may not match the user name!");
         form.eqdkpkey.focus();
         return false;
