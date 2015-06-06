@@ -9,7 +9,9 @@ Bitte beachte, dass die enthaltenen Dateipfade und Variablen der einzelnen Scrip
 
 Kopiere den Ordner 'eqdkpinstall/' nach 'var/www/vhosts/domain.de/httpdocs/' und die Dateien 'hosttemplate20.sql' und 'localconfig.gd' nach 'var/www/vhosts/domain.de/'. Zu allerletzt musst du noch ein .zip-Archiv namens 'eqdkp_template20.zip' erstellen und es in den gleichen Pfad, wie auch die 'hosttemplate20.sql' kopieren. 
 
-Um eine funktionsfähige 'eqdkp_template20.zip' zu erstellen, lade dir EQdkp Plus in der aktuellsten Version von der Entwicklerseite herunter und entpacke alle Archive (auch das zip-Archiv im zip-Archiv). Kopiere nun den Ordner 'dkphash' in das Verzeichnis 'data/' und lösche den Ordner 'install/'. Erstelle nun aus allen verbleibenden Ordnern und Dateien das Archiv 'eqdkp_template20.zip' und kopiere es in den o. g. Pfad. 
+Um eine funktionsfähige 'eqdkp_template20.zip' zu erstellen, lade dir EQdkp Plus in der aktuellsten Version von der Entwicklerseite herunter und entpacke alle Archive (auch das zip-Archiv im zip-Archiv). Kopiere nun den Ordner 'dkphash' in das Verzeichnis 'data/' und lösche den Ordner 'install/'. Erstelle nun aus allen verbleibenden Ordnern und Dateien das Archiv 'eqdkp_template20.zip' und kopiere es in den o. g. Pfad. Das Installationsprogramm ist nun fertig eingerichtet.
+
+Um EQdkp Plus 2.0 nun vom System installieren zu lassen muss du nichts weiter tun als die erforderlichen Daten an das Script 'eqdkpinstall/proceed_eqdkp_install.php' zu senden. Alle weiteren Details findest du in den Scripten.
 
 
 
