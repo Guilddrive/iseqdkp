@@ -11,7 +11,7 @@ $dbtype = 'mysqli';
 $dbhost = 'localhost';
 $dbuser = "$var";
 $dbname = "$var";
-$dbpass = "$password";
+$dbpass = "$passwd";
 $table_prefix = "" . $var . "_";
 	
 $encryptionKey = md5(md5(md5($key)));
