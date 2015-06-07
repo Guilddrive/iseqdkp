@@ -10,7 +10,7 @@ function copy_and_rename($path, $var){
   $newfile = "$path$var . ".sql"; //=> filename = prefix
 			
   if (!copy($file, $newfile)) {
-  	errormail("ERROR:EQDKP_INSTALLATION","copy and rename $path$var . "sql");
+  	errormail("ERROR:EQDKP_INSTALLATION","copy and rename $path$var . ".sql");
   }
 			
   //=> adjust prefix
