@@ -6,7 +6,9 @@
 //» 05-06-2015
 
 function set_permission($path, $subdomain, $var, $perm){
-	$file = $path$subdomain . "/" . $var;
+	
+	$file = $path . "" . $subdomain . "" . $var;
+
 	if(!@chmod($file, $perm) == true) {
 		errormail("ERROR:EQDKP_INSTALLATION","set permissions $perm $file");
 	}
