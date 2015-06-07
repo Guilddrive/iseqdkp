@@ -8,7 +8,7 @@
 function import_eqdkp_db($path, $dbname, $dbuser, $dbpass){
 	$dbhost = 'localhost';
 	$mysqlImportFilename ='$path.'/httpdocs/eqdkpinstall/sqltmp/'.$dbname.'.sql';
-	$command='mysql -h' .$dbhost .' -u' .$dbuser .' -p' .$dbpass .' ' .$dbname .' < ' .$mysqlImportFilename; //=>Importiert die Datenbank und gibt Request als ECHO aus
+	$command='mysql -h' .$dbhost .' -u' .$dbuser .' -p' .$dbpass .' ' .$dbname .' < ' .$mysqlImportFilename;
 	$output=array();
 	exec($command,$output,$worked);
 		switch($worked){
