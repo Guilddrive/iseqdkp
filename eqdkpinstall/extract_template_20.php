@@ -5,13 +5,13 @@
 //» admin@guilddrive.de
 //» 05-06-2015
 
-function extract_eqdkp_template($subdomain){
+function extract_eqdkp_template($path, $subdomain){
   $zip = new ZipArchive;
-  if ($zip->open('/var/www/vhosts/domain.de/eqdkp_template20.zip') === TRUE) {
-    $zip->extractTo("/var/www/vhosts/domain.de/$subdomain/");
+  if ($zip->open("$path . "eqdkp_template20.zip") === TRUE) {
+    $zip->extractTo("$path$subdomain/");
     $zip->close();
   }else{
-    errormail("ERROR:EQDKP_INSTALLATION","extract template 20 $subdomain");
+    errormail("ERROR:EQDKP_INSTALLATION","extract template 20 $path$subdomain");
   }
 }
 ?>
