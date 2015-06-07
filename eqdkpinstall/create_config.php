@@ -5,7 +5,7 @@
 //» admin@guilddrive.de
 //» 05-06-2015
 
-function create_eqdkp_config($var, $subdomain, $key, $passwd){
+function create_eqdkp_config($path, $var, $subdomain, $key, $passwd){
 
 $dbtype = 'mysqli';
 $dbhost = 'localhost';
@@ -15,11 +15,11 @@ $dbpass = "$passwd";
 $table_prefix = "" . $var . "_";
 	
 $encryptionKey = md5(md5(md5($key)));
-$dir = "/var/www/vhosts/domain.de/$subdomain";
+$dir = "$path$subdomain";
 	
 $fp = @fopen("$dir/config.php","w");
   if (!$fp){
-	errormail("ERROR:EQDKP_INSTALLATION","create config $var<br>$subdomain<br>$key<br>$passwd");
+	errormail("ERROR:EQDKP_INSTALLATION","create config $path; $var; $subdomain; $key; $passwd");
 	exit;
   }
 
