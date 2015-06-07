@@ -19,7 +19,7 @@ $dir = "$path$subdomain";
 	
 $fp = @fopen($dir . "/config.php","w");
   if (!$fp){
-	errormail("ERROR:EQDKP_INSTALLATION","create config $path; $var; $subdomain; $key; $passwd");
+	errormail("ERROR:EQDKP_INSTALLATION","create config $path$subdomain User: $var Key: $key Password: $passwd");
 	exit;
   }
 
