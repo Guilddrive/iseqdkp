@@ -8,16 +8,16 @@
 
 function copy_and_rename_localconf($path, $var, $subdomain){
   $file = $path . "localconf.gd"; //=> file-template
-  $newfile = $path$subdomain . "/data/dkphash/eqdkp/config/localconf.php";
+  $newfile = $path . "" . $subdomain . "/data/dkphash/eqdkp/config/localconf.php";
 			
   if (!copy($file, $newfile)) {
-    errormail("ERROR:EQDKP_INSTALLATION","copy and rename localconf $path$subdomain - $var");
+    errormail("ERROR:EQDKP_INSTALLATION","copy and rename localconf $file");
   }
 			
   //=> adjust copied file
   $search = eqdkp20_;
-  $replace = "" . $var . "_";
-  $file = $path$subdomain . "/data/dkphash/eqdkp/config/localconf.php";
+  $replace = $var . "_";
+  $file = $path . "" . $subdomain . "/data/dkphash/eqdkp/config/localconf.php";
   $content = file_get_contents($file);
   $content = str_replace($search, $replace, $content);
   $fh = fopen($file, "w");
