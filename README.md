@@ -5,7 +5,7 @@ Da wir dir auf https://guilddrive.de ein kostenloses EQdkp Plus 2.0 Hosting zur 
 
 Bevor du das Script nutzen kannst um EQdkp Plus 2.0 zu installieren, muss im Vorfeld natürlich für den jeweiligen User eine Subdomain, eine MySQL-Datenbank und ein neuer MySQL-Nutzer angelegt werden. Wie du dazu vorgehst kommt ganz darauf an, welches System du nutzt um deinen Server zu administrieren. Wir arbeiten mit der API-Schnittstelle von Plesk 12. Eine umfassende Anleitung dazu findest du unter "http://download1.parallels.com/Plesk/Doc/de-DE/online/plesk-api-rpc/"
 
-Um Pfade und Variablen, die du anpassen musst, für dich erkennbarer zu machen, haben wir in den Scripten allgemeine Begriffe, wie beispielsweise 'var/www/vhost/domain.de/' oder '$_SESSION["var"]' genutzt, dass sollte dir das Arbeiten erleichtern.
+Um Pfade und Variablen, die du anpassen musst für dich erkennbarer zu machen, haben wir in den Scripten allgemeine Begriffe, wie beispielsweise 'var/www/vhost/domain.de/' oder '$_SESSION["var"]' genutzt, dass sollte dir das Arbeiten erleichtern.
 
 Kopiere den Ordner 'eqdkpinstall/' nach 'var/www/vhosts/domain.de/httpdocs/' und die Dateien 'hosttemplate20.sql' und 'localconfig.gd' nach 'var/www/vhosts/domain.de/'. Zu allerletzt musst du noch ein .zip-Archiv namens 'eqdkp_template20.zip' erstellen und es in den gleichen Pfad, wie auch die 'hosttemplate20.sql' kopieren. 
 
