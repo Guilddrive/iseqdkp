@@ -82,11 +82,11 @@ mysqli_query($con, $sql);
 $num = mysqli_affected_rows($con);
 if ($num>0){
   mysqli_close($con);
+  session_destroy();
   echo "INSTALL COMPLETE";
 }else{
   mysqli_close($con);
+  session_destroy();
   exit("INSTALL FAIL");
 }
-
-session_destroy();
 ?>
