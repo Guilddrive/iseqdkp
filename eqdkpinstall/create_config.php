@@ -12,14 +12,14 @@ $dbhost = 'localhost';
 $dbuser = "$var";
 $dbname = "$var";
 $dbpass = "$passwd";
-$table_prefix = "" . $var . "_";
+$table_prefix = $var . "_";
 	
 $encryptionKey = md5(md5(md5($key)));
-$dir = "$path$subdomain";
+$dir = $path . "" . $subdomain;
 	
 $fp = @fopen($dir . "/config.php","w");
   if (!$fp){
-	errormail("ERROR:EQDKP_INSTALLATION","create config $path$subdomain User: $var Key: $key Password: $passwd");
+	errormail("ERROR:EQDKP_INSTALLATION","create config $dir");
 	exit;
   }
 
