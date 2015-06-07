@@ -5,13 +5,10 @@
 //» admin@guilddrive.de
 //» 05-06-2015
 
-function clear_doc_root($subdomain){
-	$delete1 = ("/var/www/vhosts/domain.de/$subdomain/any.file"); 
-	$delete2 = ("/var/www/vhosts/domain.de/$subdomain/any.file");
+function clear_doc_root($path, $subdomain, $file){
+	$delete = ("$path$subdomain$file"); 
 
-	if(!@unlink($delete1))
-		
-	if(!@unlink($delete2))
-			errormail("ERROR:EQDKP_INSTALLATION","clear doc root $subdomain");
+	if(!@unlink($delete))
+		errormail("ERROR:EQDKP_INSTALLATION","clear doc root $path$subdomain$file");
 }
 ?>
