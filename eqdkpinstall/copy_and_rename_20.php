@@ -15,7 +15,7 @@ function copy_and_rename($path, $var){
 			
   //=> adjust prefix
   $search = eqdkp20_;
-  $replace = "" . $sqlname . "_"; //MySQL-Prefix = Subdomain-Prefix
+  $replace = "" . $var . "_"; //MySQL-Prefix = Subdomain-Prefix
   $file = "$path . "httpdocs/eqdkpinstall/sqltmp/" . $var . ".sql"; //=> filename = prefix
 
 $content = file_get_contents($file);
