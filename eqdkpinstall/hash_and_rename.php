@@ -7,7 +7,7 @@
 
 function hash_and_rename($path, $subdomain, $var){
   $hash = md5($var . "_" . $var); //=> md5(mysql_prefix+databasename)
-  $rename = rename("$path$subdomain/data/dkphash", "$path$subdomain/data/$hash");
+  $rename = rename($path$subdomain . "/data/dkphash", $path$subdomain . "/data/" . $hash);
     if($rename == false){
       errormail("ERROR:EQDKP_INSTALLATION","hash and rename $var");
     }
