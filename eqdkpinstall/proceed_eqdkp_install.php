@@ -16,6 +16,7 @@ require('./error_mail_inc.php');
 //=> declare vars
 $var = $_SESSION["..."]; //=> !-->important: this must be the name of the database, database-user, mysql_prefix and subdomain without tld<--!
 $subdomain = "$var.domain.de";
+$path = '/var/www/vhosts/domain.de/'; //=> set var for docroot
 $key = $_SESSION["..."]; //=> set var for security key of eqdkp
 $mail = $_SESSION["..."]; //=> set var for user-email
 $aminuser = $_SESSION["..."]; //=> set var for eqdkp admin-login
