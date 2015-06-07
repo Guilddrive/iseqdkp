@@ -5,9 +5,9 @@
 //» admin@guilddrive.de
 //» 05-06-2015
 
-function import_eqdkp_db($dbname, $dbuser, $dbpass){
+function import_eqdkp_db($path, $dbname, $dbuser, $dbpass){
 	$dbhost = 'localhost';
-	$mysqlImportFilename ='/var/www/vhosts/domain.de/httpdocs/eqdkpinstall/sqltmp/'.$dbname.'.sql';
+	$mysqlImportFilename ='$path.'/httpdocs/eqdkpinstall/sqltmp/'.$dbname.'.sql';
 	$command='mysql -h' .$dbhost .' -u' .$dbuser .' -p' .$dbpass .' ' .$dbname .' < ' .$mysqlImportFilename; //=>Importiert die Datenbank und gibt Request als ECHO aus
 	$output=array();
 	exec($command,$output,$worked);
@@ -15,7 +15,7 @@ function import_eqdkp_db($dbname, $dbuser, $dbpass){
 		case 0:
 			break;
 		case 1:
-			errormail("ERROR:EQDKP_INSTALLATION","create db 20<br>$dbname<br>$dbuser<br>$dbpass");
+			errormail("ERROR:EQDKP_INSTALLATION","create db 20 $path; $dbname; $dbuser; $dbpass");
 			break;
 		}
 }
