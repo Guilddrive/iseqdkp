@@ -5,7 +5,8 @@
 //» admin@guilddrive.de
 //» 05-06-2015
 
-function set_permission($file, $perm){
+function set_permission($path, $subdomain, $var, $perm){
+	$file = $path$subdomain$var;
 	if(!@chmod($file, $perm) == true) {
 		errormail("ERROR:EQDKP_INSTALLATION","set permissions $perm $file");
 	}
