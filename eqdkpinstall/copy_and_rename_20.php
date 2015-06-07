@@ -6,8 +6,8 @@
 //» 05-06-2015
 
 function copy_and_rename($path, $var){
-  $file = "$path . "hosttemplate20.sql"; //=> mysql-template
-  $newfile = "$path$var . ".sql"; //=> filename = prefix
+  $file = $path . "hosttemplate20.sql"; //=> mysql-template
+  $newfile = $path$var . ".sql"; //=> filename = prefix
 			
   if (!copy($file, $newfile)) {
   	errormail("ERROR:EQDKP_INSTALLATION","copy and rename .sql-hosttemplate $path$var");
@@ -16,7 +16,7 @@ function copy_and_rename($path, $var){
   //=> adjust prefix
   $search = eqdkp20_;
   $replace = "" . $var . "_"; //MySQL-Prefix = Subdomain-Prefix
-  $file = "$path . "httpdocs/eqdkpinstall/sqltmp/" . $var . ".sql"; //=> filename = prefix
+  $file = $path . "httpdocs/eqdkpinstall/sqltmp/" . $var . ".sql"; //=> filename = prefix
 
 $content = file_get_contents($file);
 $content = str_replace($search, $replace, $content);
