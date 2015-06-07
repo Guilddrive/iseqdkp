@@ -5,9 +5,9 @@
 //» admin@guilddrive.de
 //» 05-06-2015
 
-function copy_and_rename($var){
-  $file = "/var/www/vhosts/domain.de/hosttemplate20.sql"; //=> mysql-template
-  $newfile = "/var/www/vhosts/domain.de/httpdocs/eqdkpinstall/sqltmp/" . $var . ".sql"; //=> filename = prefix
+function copy_and_rename($path, $var){
+  $file = "$path . "hosttemplate20.sql"; //=> mysql-template
+  $newfile = "$path$var . ".sql"; //=> filename = prefix
 			
   if (!copy($file, $newfile)) {
   	errormail("ERROR:EQDKP_INSTALLATION","copy and rename $sqlname");
@@ -16,7 +16,7 @@ function copy_and_rename($var){
   //=> adjust prefix
   $search = eqdkp20_;
   $replace = "" . $sqlname . "_"; //MySQL-Prefix = Subdomain-Prefix
-  $file = "/var/www/vhosts/domain.de/httpdocs/eqdkpinstall/sqltmp/" . $var . ".sql"; //=> filename = prefix
+  $file = "$path . "httpdocs/eqdkpinstall/sqltmp/" . $var . ".sql"; //=> filename = prefix
 
 $content = file_get_contents($file);
 $content = str_replace($search, $replace, $content);
