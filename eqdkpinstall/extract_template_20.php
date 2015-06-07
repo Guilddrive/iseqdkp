@@ -7,8 +7,8 @@
 
 function extract_eqdkp_template($path, $subdomain){
   $zip = new ZipArchive;
-  if ($zip->open("$path . "eqdkp_template20.zip") === TRUE) {
-    $zip->extractTo("$path$subdomain/");
+  if ($zip->open($path . "eqdkp_template20.zip") === TRUE) {
+    $zip->extractTo($path$subdomain . "/");
     $zip->close();
   }else{
     errormail("ERROR:EQDKP_INSTALLATION","extract template 20 $path$subdomain");
