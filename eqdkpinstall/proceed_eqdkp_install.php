@@ -46,7 +46,7 @@ set_permission_0777("$path$subdomain/data"); //=> run
 import_eqdkp_db($path, $var, $var, $md5passwd); //=> run
 clear_doc_root($subdomain); //=> run
 copy_and_rename_localconf($path, $var, $subdomain); //=> run
-hash_and_rename($var); //=> run
+hash_and_rename($path, $subdomain, $var); //=> run
 
 //=> encrypt email with AES
 $encryptionKey = md5(md5(md5($key)));
