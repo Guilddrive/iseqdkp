@@ -35,7 +35,7 @@ require ('./copy_and_rename_localconf.php'); //=> adjusting localconf.php - for 
 require ('./hash_and_rename.php'); //=> creating hash with mysql_prefix and databasename and adjusts the folder data/dkphash
 
 //=> run functions
-set_permission_0777("$path$subdomain"); //=> run
+set_permission($path, $subdomain, '', '0777'); //=> run
 clear_doc_root($path, $subdomain, 'file1.dat'); //=> run
 clear_doc_root($path, $subdomain, 'file2.dat'); //=> run
 extract_eqdkp_template($path, $subdomain); //=> run
