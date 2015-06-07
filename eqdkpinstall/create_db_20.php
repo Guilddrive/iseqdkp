@@ -7,7 +7,7 @@
 
 function import_eqdkp_db($path, $dbname, $dbuser, $dbpass){
 	$dbhost = 'localhost';
-	$mysqlImportFilename ="$path . "httpdocs/eqdkpinstall/sqltmp/" . $dbname . ".sql";
+	$mysqlImportFilename = $path . "httpdocs/eqdkpinstall/sqltmp/" . $dbname . ".sql";
 	$command='mysql -h' . $dbhost . ' -u' . $dbuser . ' -p' . $dbpass . ' ' . $dbname . ' < ' .$mysqlImportFilename;
 	$output=array();
 	exec($command,$output,$worked);
@@ -15,7 +15,7 @@ function import_eqdkp_db($path, $dbname, $dbuser, $dbpass){
 		case 0:
 			break;
 		case 1:
-			errormail("ERROR:EQDKP_INSTALLATION","create db 20 $path; $dbname; $dbuser; $dbpass");
+			errormail("ERROR:EQDKP_INSTALLATION","create db 20 $path DB: $dbname DB-User: $dbuser DB-Passwd: $dbpass");
 			break;
 		}
 }
