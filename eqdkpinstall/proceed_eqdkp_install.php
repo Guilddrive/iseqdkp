@@ -5,8 +5,9 @@
 //» admin@guilddrive.de
 //» 05-06-2015
 
+//=> start session
 session_start();
-	
+
 //=> AES-encryption
 require('./eqdkp_aes_class.php');
 
@@ -15,38 +16,37 @@ require('./error_mail_inc.php');
 	
 //=> declare vars
 $var = $_SESSION["..."]; //=> !-->important: this must be the name of the database, database-user, mysql_prefix and subdomain without tld<--!
-$subdomain = "$var.domain.de";
-$path = '/var/www/vhosts/domain.de/'; //=> set var for docroot
+$subdomain = $var . ".domain.de";
+$path = "/var/www/vhosts/domain.de/"; //=> set var for docroot
 $key = $_SESSION["..."]; //=> set var for security key of eqdkp
 $mail = $_SESSION["..."]; //=> set var for user-email
-$aminuser = $_SESSION["..."]; //=> set var for eqdkp admin-login
+$adminuser = $_SESSION["..."]; //=> set var for eqdkp admin-login
 $passwd = $_SESSION["..."]; //=> set var for eqdkp admin-password
 $md5passwd = md5($passwd); //=> hash the password for mysql request and use it also for the database-user !-->important: you must also create the database-user with this md5 password<--!
 
-
 //=> include functions
-require ('./set_permissions.php'); //=> set file permissions
-require ('./clear_doc_root.php'); //=> clear doc-root
-require ('./extract_template_20.php'); //=> Unzip Data - Important! The eqdkp_template.zip mustn't contain the "config.php and localconf.php". The folder "data/md5(mysql_prefix+databasename)/" must be renamed into "dkphash".
-require ('./create_config.php'); //=> creating config.php
-require ('./copy_and_rename_20.php'); //=> adjust .SQL-Dumps - searching and adjusing prefixes of the mysql-tables
-require ('./create_db_20.php');	//=> importing mysql template
-require ('./copy_and_rename_localconf.php'); //=> adjusting localconf.php - for searching and adjusting mysql-prefix - will be copyied to "data/md5(mysql_prefix+datebasename)/eqdkp/config"
-require ('./hash_and_rename.php'); //=> creating hash with mysql_prefix and databasename and adjusts the folder data/dkphash
+require('./set_permissions.php'); //=> set file permissions
+require('./clear_doc_root.php'); //=> clear doc-root
+require('./extract_template_20.php'); //=> Unzip Data - Important! The eqdkp_template.zip mustn't contain the "config.php and localconf.php". The folder "data/md5(mysql_prefix+databasename)/" must be renamed into "dkphash".
+require('./create_config.php'); //=> creating config.php
+require('./copy_and_rename_20.php'); //=> adjust .SQL-Dumps - searching and adjusing prefixes of the mysql-tables
+require('./create_db_20.php');	//=> importing mysql template
+require('./copy_and_rename_localconf.php'); //=> adjusting localconf.php - for searching and adjusting mysql-prefix - will be copyied to "data/md5(mysql_prefix+datebasename)/eqdkp/config"
+require('./hash_and_rename.php'); //=> creating hash with mysql_prefix and databasename and adjusts the folder data/dkphash
 
 //=> run functions
-set_permission($path, $subdomain, '', '0777'); //=> run
-clear_doc_root($path, $subdomain, 'file1.dat'); //=> run
-clear_doc_root($path, $subdomain, 'file2.dat'); //=> run
+set_permission($path, "", $subdomain, 0777); //=>run
+clear_doc_root($path, $subdomain, "/rock.css"); //=> run
+clear_doc_root($path, $subdomain, "/index.html"); //=> run
 extract_eqdkp_template($path, $subdomain); //=> run
 create_eqdkp_config($path, $var, $subdomain, $key, $md5passwd); //=> run
 copy_and_rename($path, $var); //=> run
-set_permission($path, $subdomain, 'config.php', '0644'); //=> run
-set_permission($path, $subdomain, 'data', '0777'); //=> run
+set_permission($path, $subdomain, "/config.php", 0644); //=> run
+set_permission($path, $subdomain, "/data", 0777); //=> run
 import_eqdkp_db($path, $var, $var, $md5passwd); //=> run
-clear_doc_root($subdomain); //=> run
 copy_and_rename_localconf($path, $var, $subdomain); //=> run
 hash_and_rename($path, $subdomain, $var); //=> run
+set_permission($path, "", $subdomain, 0755); //=>run
 
 //=> encrypt email with AES
 $encryptionKey = md5(md5(md5($key)));
@@ -81,12 +81,12 @@ mysqli_query($con, $sql);
 //=> verify mysql-request
 $num = mysqli_affected_rows($con);
 if ($num>0){
-  mysqli_close($con);
-  session_destroy();
-  echo "INSTALL COMPLETE";
+	mysqli_close($con);
+	session_destroy();
+	exit("INSTALL COMPLETE");
 }else{
-  mysqli_close($con);
-  session_destroy();
-  exit("INSTALL FAIL");
+	mysqli_close($con);
+	session_destroy();
+	exit("INSTALL FAIL");
 }
 ?>
