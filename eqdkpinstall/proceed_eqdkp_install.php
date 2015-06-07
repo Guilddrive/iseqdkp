@@ -36,8 +36,8 @@ require ('./hash_and_rename.php'); //=> creating hash with mysql_prefix and data
 
 //=> run functions
 set_permission_0777("$path$subdomain"); //=> run
-clear_doc_root($path, $subdomain, "file1.dat"); //=> run
-clear_doc_root($path, $subdomain, "file2.dat"); //=> run
+clear_doc_root($path, $subdomain, 'file1.dat'); //=> run
+clear_doc_root($path, $subdomain, 'file2.dat'); //=> run
 extract_eqdkp_template($subdomain); //=> run
 create_eqdkp_config($var, $subdomain, $key, $md5passwd); //=> run
 copy_and_rename($var); //=> run
