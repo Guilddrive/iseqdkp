@@ -15,7 +15,7 @@ require('./eqdkp_aes_class.php');
 require('./error_mail_inc.php');
 	
 //=> declare vars
-$var = $_SESSION["..."]; //=> !-->important: this must be the name of the database, database-user, mysql_prefix and subdomain without tld<--!
+$var = strtolower($_SESSION["..."]); //=> !-->important: this must be the name of the database, database-user, mysql_prefix and subdomain without tld<--!
 $subdomain = $var . ".domain.de";
 $path = "/var/www/vhosts/domain.de/"; //=> set var for docroot
 $key = $_SESSION["..."]; //=> set var for security key of eqdkp
