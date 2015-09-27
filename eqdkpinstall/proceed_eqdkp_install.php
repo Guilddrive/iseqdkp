@@ -26,7 +26,6 @@ $md5passwd = md5($passwd); //=> hash the password for mysql request and use it a
 
 //=> include functions
 require('./set_permissions.php'); //=> set file permissions
-require('./clear_doc_root.php'); //=> clear doc-root
 require('./extract_template_20.php'); //=> Unzip Data - Important! The eqdkp_template.zip mustn't contain the "config.php and localconf.php". The folder "data/md5(mysql_prefix+databasename)/" must be renamed into "dkphash".
 require('./create_config.php'); //=> creating config.php
 require('./copy_and_rename_20.php'); //=> adjust .SQL-Dumps - searching and adjusing prefixes of the mysql-tables
@@ -36,8 +35,6 @@ require('./hash_and_rename.php'); //=> creating hash with mysql_prefix and datab
 
 //=> run functions
 set_permission($path, "", $subdomain, 0777); //=>run
-clear_doc_root($path, $subdomain, "/rock.css"); //=> run
-clear_doc_root($path, $subdomain, "/index.html"); //=> run
 extract_eqdkp_template($path, $subdomain); //=> run
 create_eqdkp_config($path, $var, $subdomain, $key, $md5passwd); //=> run
 copy_and_rename($path, $var); //=> run
