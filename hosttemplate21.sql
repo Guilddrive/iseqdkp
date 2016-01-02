@@ -16,10 +16,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_adjustments`
+-- Tabellenstruktur für Tabelle `eqdkp21_adjustments`
 --
 
-CREATE TABLE `eqdkp22_adjustments` (
+CREATE TABLE `eqdkp21_adjustments` (
   `adjustment_id` mediumint(8) UNSIGNED NOT NULL,
   `adjustment_value` float(11,2) DEFAULT NULL,
   `adjustment_date` int(11) NOT NULL DEFAULT '0',
@@ -35,10 +35,10 @@ CREATE TABLE `eqdkp22_adjustments` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_articles`
+-- Tabellenstruktur für Tabelle `eqdkp21_articles`
 --
 
-CREATE TABLE `eqdkp22_articles` (
+CREATE TABLE `eqdkp21_articles` (
   `id` int(10) UNSIGNED NOT NULL,
   `title` text COLLATE utf8_bin NOT NULL,
   `text` mediumtext COLLATE utf8_bin NOT NULL,
@@ -68,10 +68,10 @@ CREATE TABLE `eqdkp22_articles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Daten für Tabelle `eqdkp22_articles`
+-- Daten für Tabelle `eqdkp21_articles`
 --
 
-INSERT INTO `eqdkp22_articles` (`id`, `title`, `text`, `category`, `featured`, `comments`, `votes`, `published`, `show_from`, `show_to`, `user_id`, `date`, `previewimage`, `alias`, `hits`, `sort_id`, `tags`, `votes_count`, `votes_sum`, `votes_users`, `last_edited`, `last_edited_user`, `page_objects`, `hide_header`, `index`, `undeletable`) VALUES
+INSERT INTO `eqdkp21_articles` (`id`, `title`, `text`, `category`, `featured`, `comments`, `votes`, `published`, `show_from`, `show_to`, `user_id`, `date`, `previewimage`, `alias`, `hits`, `sort_id`, `tags`, `votes_count`, `votes_sum`, `votes_users`, `last_edited`, `last_edited_user`, `page_objects`, `hide_header`, `index`, `undeletable`) VALUES
 (1, 'Neue Funktionen von EQdkp Plus', '&lt;p&gt;Das EQdkp Plus 2.0 stellt wesentliche neue Funktionen zur Verfügung. Dieser Artikel dient dazu, diese Funktionen etwas näher kennenzulernen.&lt;/p&gt;\n&lt;h3&gt;Artikelsystem&lt;/h3&gt;\n&lt;p&gt;Anstatt der früheren News und Infoseiten basiert nun alles auf einem Artikelsystem. Jede News und jede Seite ist dabei ein Artikel. Über Artikelkategorien können diese leicht gruppiert werden. Auch kann man dadurch Blogs ermöglichen.&lt;/p&gt;\n&lt;p&gt;Die einzelnen Artikel können über einen Weiterlesen-Bereich und Seitenumbrüchen aufgeteilt werden. Auch besteht die Möglichkeit, über den Editor Bildergalerien, Items oder Raidloot in einen Artikel einzufügen.&lt;/p&gt;\n&lt;h3&gt;Medienverwaltung&lt;/h3&gt;\n&lt;p&gt;Durch die Medienverwaltung ist es nun ein leichtes, Medien in Artikel hinzuzufügen. Dateien können so zum Beispiel über Drag&amp;Drop einfach hochgeladen werden. Desweiteren können Bilder sogar im Medieneditor bearbeitet werden.&lt;/p&gt;\n&lt;h3&gt;Menüverwaltung&lt;/h3&gt;\n&lt;p&gt;Eine weitere Neuerung ist, dass es nur noch ein zentrales Menü gibt, dass frei angepasst werden kann. Die einzelnen Einträge lassen sich mittels Drag&amp;Drop positieren, und dass sogar in bis zu 3 Ebenen, so dass Untermenüs enstehen. Wie von bisherigen EQdkp Plus Versionen gewohnt, lassen sich auch Links zu externen Seiten anlegen, alles zentral über den &quot;Link hinzufügen&quot;-Button, wo man auch die Verlinkung zu Artikel und -Kategorien vornimmt.&lt;/p&gt;\n&lt;h3&gt;Portalverwaltung&lt;/h3&gt;\n&lt;p&gt;Früher gab es nur ein ein Portallayout, d.h. auf allen Seiten waren die Portalmodule gleich. Das hat sich nun geändert. So kann man Artikelkategorien andere Portallayouts zuweisen.&lt;/p&gt;\n&lt;p&gt;Desweiteren besteht die Möglichkeit, eigene Portalblöcke anzulegen, so dass man diese im Template einbindet, um z.B. Links im Footer einfacher verwalten zu können.&lt;/p&gt;', 2, 1, 1, 0, 1, '', '', 1, 1451699925, '', 'new-features', 0, 0, 'a:1:{i:0;s:0:"";}', 0, 0, '', 1451699925, 1, NULL, 0, 0, 0),
 (5, 'Charakter', '&lt;p class=&quot;system-article&quot; title=&quot;character&quot;&gt;character&lt;/p&gt;\r\n&lt;p&gt; &lt;/p&gt;', 9, 0, 1, 0, 1, '', '', 1, 1451699925, '', 'index_character', 0, 0, 'a:1:{i:0;s:0:"";}', 0, 0, '', 1451699925, 1, 'a:1:{i:0;s:9:"character";}', 1, 1, 1),
 (6, 'Roster', '&lt;p class=&quot;system-article&quot; title=&quot;roster&quot;&gt;roster&lt;/p&gt;\r\n&lt;p&gt; &lt;/p&gt;', 7, 0, 0, 0, 1, '', '', 1, 1451699925, '', 'index_roster', 0, 0, 'a:1:{i:0;s:0:"";}', 0, 0, '', 1451699925, 1, 'a:1:{i:0;s:6:"roster";}', 1, 1, 1),
@@ -90,10 +90,10 @@ INSERT INTO `eqdkp22_articles` (`id`, `title`, `text`, `category`, `featured`, `
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_article_categories`
+-- Tabellenstruktur für Tabelle `eqdkp21_article_categories`
 --
 
-CREATE TABLE `eqdkp22_article_categories` (
+CREATE TABLE `eqdkp21_article_categories` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` text COLLATE utf8_bin NOT NULL,
   `alias` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
@@ -118,10 +118,10 @@ CREATE TABLE `eqdkp22_article_categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Daten für Tabelle `eqdkp22_article_categories`
+-- Daten für Tabelle `eqdkp21_article_categories`
 --
 
-INSERT INTO `eqdkp22_article_categories` (`id`, `name`, `alias`, `portal_layout`, `description`, `per_page`, `permissions`, `published`, `parent`, `sort_id`, `list_type`, `aggregation`, `featured_only`, `notify_on_onpublished_articles`, `social_share_buttons`, `show_childs`, `article_published_state`, `hide_header`, `sortation_type`, `featured_ontop`, `hide_on_rss`) VALUES
+INSERT INTO `eqdkp21_article_categories` (`id`, `name`, `alias`, `portal_layout`, `description`, `per_page`, `permissions`, `published`, `parent`, `sort_id`, `list_type`, `aggregation`, `featured_only`, `notify_on_onpublished_articles`, `social_share_buttons`, `show_childs`, `article_published_state`, `hide_header`, `sortation_type`, `featured_ontop`, `hide_on_rss`) VALUES
 (1, 'System', 'system', 1, '', 25, 'a:5:{s:3:"rea";a:6:{i:2;s:1:"1";i:3;s:1:"1";i:4;s:1:"1";i:5;s:1:"1";i:6;s:1:"1";i:1;s:1:"1";}s:3:"cre";a:6:{i:2;s:1:"1";i:3;s:1:"1";i:4;s:2:"-1";i:5;s:2:"-1";i:6;s:1:"0";i:1;s:2:"-1";}s:3:"upd";a:6:{i:2;s:1:"1";i:3;s:1:"1";i:4;s:2:"-1";i:5;s:2:"-1";i:6;s:1:"0";i:1;s:2:"-1";}s:3:"del";a:6:{i:2;s:1:"1";i:3;s:1:"1";i:4;s:2:"-1";i:5;s:2:"-1";i:6;s:1:"0";i:1;s:2:"-1";}s:3:"chs";a:6:{i:2;s:1:"1";i:3;s:1:"1";i:4;s:2:"-1";i:5;s:2:"-1";i:6;s:1:"0";i:1;s:2:"-1";}}', 1, 0, 99999999, 1, 'a:0:{}', 0, 0, 0, 0, 1, 0, 1, 0, 1),
 (2, 'News', 'news', 1, '', 15, 'a:5:{s:3:"rea";a:6:{i:2;s:2:"-1";i:3;s:2:"-1";i:4;s:2:"-1";i:5;s:2:"-1";i:6;s:2:"-1";i:1;s:2:"-1";}s:3:"cre";a:6:{i:2;s:2:"-1";i:3;s:2:"-1";i:4;s:2:"-1";i:5;s:2:"-1";i:6;s:1:"1";i:1;s:2:"-1";}s:3:"upd";a:6:{i:2;s:2:"-1";i:3;s:2:"-1";i:4;s:2:"-1";i:5;s:2:"-1";i:6;s:1:"1";i:1;s:2:"-1";}s:3:"del";a:6:{i:2;s:2:"-1";i:3;s:2:"-1";i:4;s:2:"-1";i:5;s:2:"-1";i:6;s:1:"1";i:1;s:2:"-1";}s:3:"chs";a:6:{i:2;s:2:"-1";i:3;s:2:"-1";i:4;s:2:"-1";i:5;s:2:"-1";i:6;s:1:"1";i:1;s:2:"-1";}}', 1, 1, 99999999, 1, 'a:1:{i:0;s:1:"2";}', 0, 0, 1, 0, 1, 1, 1, 0, 0),
 (3, 'Events', 'events', 1, '', 25, 'a:5:{s:3:"rea";a:6:{i:2;s:2:"-1";i:3;s:2:"-1";i:4;s:2:"-1";i:5;s:2:"-1";i:6;s:2:"-1";i:1;s:2:"-1";}s:3:"cre";a:6:{i:2;s:2:"-1";i:3;s:2:"-1";i:4;s:2:"-1";i:5;s:2:"-1";i:6;s:2:"-1";i:1;s:2:"-1";}s:3:"upd";a:6:{i:2;s:2:"-1";i:3;s:2:"-1";i:4;s:2:"-1";i:5;s:2:"-1";i:6;s:2:"-1";i:1;s:2:"-1";}s:3:"del";a:6:{i:2;s:2:"-1";i:3;s:2:"-1";i:4;s:2:"-1";i:5;s:2:"-1";i:6;s:2:"-1";i:1;s:2:"-1";}s:3:"chs";a:6:{i:2;s:2:"-1";i:3;s:2:"-1";i:4;s:2:"-1";i:5;s:2:"-1";i:6;s:2:"-1";i:1;s:2:"-1";}}', 1, 1, 99999999, 1, 'a:0:{}', 0, 0, 0, 0, 1, 1, 0, 0, 1),
@@ -135,20 +135,20 @@ INSERT INTO `eqdkp22_article_categories` (`id`, `name`, `alias`, `portal_layout`
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_auth_groups`
+-- Tabellenstruktur für Tabelle `eqdkp21_auth_groups`
 --
 
-CREATE TABLE `eqdkp22_auth_groups` (
+CREATE TABLE `eqdkp21_auth_groups` (
   `group_id` int(11) UNSIGNED NOT NULL,
   `auth_id` int(11) UNSIGNED NOT NULL,
   `auth_setting` enum('N','Y') COLLATE utf8_bin NOT NULL DEFAULT 'N'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Daten für Tabelle `eqdkp22_auth_groups`
+-- Daten für Tabelle `eqdkp21_auth_groups`
 --
 
-INSERT INTO `eqdkp22_auth_groups` (`group_id`, `auth_id`, `auth_setting`) VALUES
+INSERT INTO `eqdkp21_auth_groups` (`group_id`, `auth_id`, `auth_setting`) VALUES
 (1, 42, 'Y'),
 (1, 45, 'Y'),
 (3, 35, 'Y'),
@@ -221,20 +221,20 @@ INSERT INTO `eqdkp22_auth_groups` (`group_id`, `auth_id`, `auth_setting`) VALUES
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_auth_options`
+-- Tabellenstruktur für Tabelle `eqdkp21_auth_options`
 --
 
-CREATE TABLE `eqdkp22_auth_options` (
+CREATE TABLE `eqdkp21_auth_options` (
   `auth_id` int(10) UNSIGNED NOT NULL,
   `auth_value` varchar(65) COLLATE utf8_bin NOT NULL,
   `auth_default` enum('N','Y') COLLATE utf8_bin NOT NULL DEFAULT 'N'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Daten für Tabelle `eqdkp22_auth_options`
+-- Daten für Tabelle `eqdkp21_auth_options`
 --
 
-INSERT INTO `eqdkp22_auth_options` (`auth_id`, `auth_value`, `auth_default`) VALUES
+INSERT INTO `eqdkp21_auth_options` (`auth_id`, `auth_value`, `auth_default`) VALUES
 (1, 'a_event_add', 'N'),
 (2, 'a_event_upd', 'N'),
 (3, 'a_event_del', 'N'),
@@ -287,10 +287,10 @@ INSERT INTO `eqdkp22_auth_options` (`auth_id`, `auth_value`, `auth_default`) VAL
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_auth_users`
+-- Tabellenstruktur für Tabelle `eqdkp21_auth_users`
 --
 
-CREATE TABLE `eqdkp22_auth_users` (
+CREATE TABLE `eqdkp21_auth_users` (
   `user_id` smallint(5) UNSIGNED NOT NULL,
   `auth_id` int(11) UNSIGNED NOT NULL,
   `auth_setting` enum('N','Y') COLLATE utf8_bin NOT NULL DEFAULT 'N'
@@ -299,10 +299,10 @@ CREATE TABLE `eqdkp22_auth_users` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_calendars`
+-- Tabellenstruktur für Tabelle `eqdkp21_calendars`
 --
 
-CREATE TABLE `eqdkp22_calendars` (
+CREATE TABLE `eqdkp21_calendars` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
   `color` varchar(10) COLLATE utf8_bin DEFAULT NULL,
@@ -315,10 +315,10 @@ CREATE TABLE `eqdkp22_calendars` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Daten für Tabelle `eqdkp22_calendars`
+-- Daten für Tabelle `eqdkp21_calendars`
 --
 
-INSERT INTO `eqdkp22_calendars` (`id`, `name`, `color`, `private`, `feed`, `system`, `type`, `restricted`, `affiliation`) VALUES
+INSERT INTO `eqdkp21_calendars` (`id`, `name`, `color`, `private`, `feed`, `system`, `type`, `restricted`, `affiliation`) VALUES
 (1, 'Raids', '#00628c', 0, NULL, 1, 1, 1, 'core'),
 (2, 'Userraids', '#0cb20f', 0, NULL, 1, 1, 0, 'core'),
 (3, 'Standard', '#ba1e1e', 0, NULL, 0, 2, 0, 'core');
@@ -326,10 +326,10 @@ INSERT INTO `eqdkp22_calendars` (`id`, `name`, `color`, `private`, `feed`, `syst
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_calendar_events`
+-- Tabellenstruktur für Tabelle `eqdkp21_calendar_events`
 --
 
-CREATE TABLE `eqdkp22_calendar_events` (
+CREATE TABLE `eqdkp21_calendar_events` (
   `id` int(10) UNSIGNED NOT NULL,
   `cloneid` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `calendar_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
@@ -350,10 +350,10 @@ CREATE TABLE `eqdkp22_calendar_events` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_calendar_raid_attendees`
+-- Tabellenstruktur für Tabelle `eqdkp21_calendar_raid_attendees`
 --
 
-CREATE TABLE `eqdkp22_calendar_raid_attendees` (
+CREATE TABLE `eqdkp21_calendar_raid_attendees` (
   `id` int(10) UNSIGNED NOT NULL,
   `calendar_events_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `member_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
@@ -371,10 +371,10 @@ CREATE TABLE `eqdkp22_calendar_raid_attendees` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_calendar_raid_guests`
+-- Tabellenstruktur für Tabelle `eqdkp21_calendar_raid_guests`
 --
 
-CREATE TABLE `eqdkp22_calendar_raid_guests` (
+CREATE TABLE `eqdkp21_calendar_raid_guests` (
   `id` int(10) UNSIGNED NOT NULL,
   `calendar_events_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `name` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
@@ -387,10 +387,10 @@ CREATE TABLE `eqdkp22_calendar_raid_guests` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_calendar_raid_templates`
+-- Tabellenstruktur für Tabelle `eqdkp21_calendar_raid_templates`
 --
 
-CREATE TABLE `eqdkp22_calendar_raid_templates` (
+CREATE TABLE `eqdkp21_calendar_raid_templates` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `tpldata` text COLLATE utf8_bin
@@ -399,10 +399,10 @@ CREATE TABLE `eqdkp22_calendar_raid_templates` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_classcolors`
+-- Tabellenstruktur für Tabelle `eqdkp21_classcolors`
 --
 
-CREATE TABLE `eqdkp22_classcolors` (
+CREATE TABLE `eqdkp21_classcolors` (
   `template` int(3) NOT NULL,
   `class_id` int(2) NOT NULL,
   `color` varchar(7) COLLATE utf8_bin DEFAULT NULL
@@ -411,10 +411,10 @@ CREATE TABLE `eqdkp22_classcolors` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_comments`
+-- Tabellenstruktur für Tabelle `eqdkp21_comments`
 --
 
-CREATE TABLE `eqdkp22_comments` (
+CREATE TABLE `eqdkp21_comments` (
   `id` int(11) UNSIGNED NOT NULL,
   `attach_id` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `userid` int(11) UNSIGNED NOT NULL,
@@ -427,20 +427,20 @@ CREATE TABLE `eqdkp22_comments` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_config`
+-- Tabellenstruktur für Tabelle `eqdkp21_config`
 --
 
-CREATE TABLE `eqdkp22_config` (
+CREATE TABLE `eqdkp21_config` (
   `config_name` varchar(120) COLLATE utf8_bin NOT NULL,
   `config_plugin` varchar(40) COLLATE utf8_bin NOT NULL DEFAULT 'core',
   `config_value` text COLLATE utf8_bin
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Daten für Tabelle `eqdkp22_config`
+-- Daten für Tabelle `eqdkp21_config`
 --
 
-INSERT INTO `eqdkp22_config` (`config_name`, `config_plugin`, `config_value`) VALUES
+INSERT INTO `eqdkp21_config` (`config_name`, `config_plugin`, `config_value`) VALUES
 ('account_activation', 'core', '1'),
 ('active_point_adj', 'core', '0.00'),
 ('admin_email', 'core', ''),
@@ -504,7 +504,7 @@ INSERT INTO `eqdkp22_config` (`config_name`, `config_plugin`, `config_value`) VA
 ('pk_maintenance_mode', 'core', '0'),
 ('pk_newsloot_limit', 'core', 'all'),
 ('plus_version', 'core', '2.1.4.0'),
-('prefix', 'pdc', 'eqdkp22_'),
+('prefix', 'pdc', 'eqdkp21_'),
 ('round_activate', 'core', '1'),
 ('round_precision', 'core', '2'),
 ('seo_extension', 'core', '1'),
@@ -519,10 +519,10 @@ INSERT INTO `eqdkp22_config` (`config_name`, `config_plugin`, `config_value`) VA
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_events`
+-- Tabellenstruktur für Tabelle `eqdkp21_events`
 --
 
-CREATE TABLE `eqdkp22_events` (
+CREATE TABLE `eqdkp21_events` (
   `event_id` smallint(5) UNSIGNED NOT NULL,
   `event_name` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `event_value` float(6,2) DEFAULT NULL,
@@ -534,10 +534,10 @@ CREATE TABLE `eqdkp22_events` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_groups_raid`
+-- Tabellenstruktur für Tabelle `eqdkp21_groups_raid`
 --
 
-CREATE TABLE `eqdkp22_groups_raid` (
+CREATE TABLE `eqdkp21_groups_raid` (
   `groups_raid_id` int(11) NOT NULL,
   `groups_raid_name` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
   `groups_raid_color` varchar(10) COLLATE utf8_bin DEFAULT NULL,
@@ -548,19 +548,19 @@ CREATE TABLE `eqdkp22_groups_raid` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Daten für Tabelle `eqdkp22_groups_raid`
+-- Daten für Tabelle `eqdkp21_groups_raid`
 --
 
-INSERT INTO `eqdkp22_groups_raid` (`groups_raid_id`, `groups_raid_name`, `groups_raid_color`, `groups_raid_desc`, `groups_raid_system`, `groups_raid_default`, `groups_raid_sortid`) VALUES
+INSERT INTO `eqdkp21_groups_raid` (`groups_raid_id`, `groups_raid_name`, `groups_raid_color`, `groups_raid_desc`, `groups_raid_system`, `groups_raid_default`, `groups_raid_sortid`) VALUES
 (1, 'Default', '#000000', '', 1, 1, 1);
 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_groups_raid_members`
+-- Tabellenstruktur für Tabelle `eqdkp21_groups_raid_members`
 --
 
-CREATE TABLE `eqdkp22_groups_raid_members` (
+CREATE TABLE `eqdkp21_groups_raid_members` (
   `group_id` int(22) NOT NULL,
   `member_id` int(22) NOT NULL,
   `grpleader` int(1) NOT NULL DEFAULT '0'
@@ -569,10 +569,10 @@ CREATE TABLE `eqdkp22_groups_raid_members` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_groups_user`
+-- Tabellenstruktur für Tabelle `eqdkp21_groups_user`
 --
 
-CREATE TABLE `eqdkp22_groups_user` (
+CREATE TABLE `eqdkp21_groups_user` (
   `groups_user_id` int(11) NOT NULL,
   `groups_user_name` varchar(255) COLLATE utf8_bin NOT NULL,
   `groups_user_desc` varchar(255) COLLATE utf8_bin NOT NULL,
@@ -584,10 +584,10 @@ CREATE TABLE `eqdkp22_groups_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Daten für Tabelle `eqdkp22_groups_user`
+-- Daten für Tabelle `eqdkp21_groups_user`
 --
 
-INSERT INTO `eqdkp22_groups_user` (`groups_user_id`, `groups_user_name`, `groups_user_desc`, `groups_user_deletable`, `groups_user_default`, `groups_user_hide`, `groups_user_sortid`, `groups_user_team`) VALUES
+INSERT INTO `eqdkp21_groups_user` (`groups_user_id`, `groups_user_name`, `groups_user_desc`, `groups_user_deletable`, `groups_user_default`, `groups_user_hide`, `groups_user_sortid`, `groups_user_team`) VALUES
 (1, 'Gäste', 'Gäste sind nicht eingeloggte Benutzer', 0, 0, 1, 0, 0),
 (2, 'Super-Administratoren', 'Super-Administratoren haben sämtliche Rechte', 0, 0, 0, 0, 0),
 (3, 'Administratoren', 'Administratoren haben nicht alle Admin-Rechte', 0, 0, 0, 0, 0),
@@ -598,48 +598,48 @@ INSERT INTO `eqdkp22_groups_user` (`groups_user_id`, `groups_user_name`, `groups
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_groups_users`
+-- Tabellenstruktur für Tabelle `eqdkp21_groups_users`
 --
 
-CREATE TABLE `eqdkp22_groups_users` (
+CREATE TABLE `eqdkp21_groups_users` (
   `group_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `grpleader` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Daten für Tabelle `eqdkp22_groups_users`
+-- Daten für Tabelle `eqdkp21_groups_users`
 --
 
-INSERT INTO `eqdkp22_groups_users` (`group_id`, `user_id`, `grpleader`) VALUES
+INSERT INTO `eqdkp21_groups_users` (`group_id`, `user_id`, `grpleader`) VALUES
 (2, 1, 1);
 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_itempool`
+-- Tabellenstruktur für Tabelle `eqdkp21_itempool`
 --
 
-CREATE TABLE `eqdkp22_itempool` (
+CREATE TABLE `eqdkp21_itempool` (
   `itempool_id` int(11) UNSIGNED NOT NULL,
   `itempool_name` varchar(255) COLLATE utf8_bin NOT NULL,
   `itempool_desc` text COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Daten für Tabelle `eqdkp22_itempool`
+-- Daten für Tabelle `eqdkp21_itempool`
 --
 
-INSERT INTO `eqdkp22_itempool` (`itempool_id`, `itempool_name`, `itempool_desc`) VALUES
+INSERT INTO `eqdkp21_itempool` (`itempool_id`, `itempool_name`, `itempool_desc`) VALUES
 (1, 'default', 'Default itempool');
 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_items`
+-- Tabellenstruktur für Tabelle `eqdkp21_items`
 --
 
-CREATE TABLE `eqdkp22_items` (
+CREATE TABLE `eqdkp21_items` (
   `item_id` int(10) UNSIGNED NOT NULL,
   `item_name` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `member_id` smallint(5) UNSIGNED NOT NULL,
@@ -657,10 +657,10 @@ CREATE TABLE `eqdkp22_items` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_links`
+-- Tabellenstruktur für Tabelle `eqdkp21_links`
 --
 
-CREATE TABLE `eqdkp22_links` (
+CREATE TABLE `eqdkp21_links` (
   `link_id` int(12) NOT NULL,
   `link_url` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
   `link_name` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
@@ -672,10 +672,10 @@ CREATE TABLE `eqdkp22_links` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Daten für Tabelle `eqdkp22_links`
+-- Daten für Tabelle `eqdkp21_links`
 --
 
-INSERT INTO `eqdkp22_links` (`link_id`, `link_url`, `link_name`, `link_window`, `link_menu`, `link_sortid`, `link_visibility`, `link_height`) VALUES
+INSERT INTO `eqdkp21_links` (`link_id`, `link_url`, `link_name`, `link_window`, `link_menu`, `link_sortid`, `link_visibility`, `link_height`) VALUES
 (1, '#', 'Guild', '0', 0, 0, '[&#34;0&#34;]', 4024),
 (2, '#', 'Links', '0', 0, 0, '[&#34;0&#34;]', 4024),
 (3, 'http://eqdkp-plus.eu', 'EQdkp-Plus', '1', 0, 0, '[&#34;0&#34;]', 4024),
@@ -684,10 +684,10 @@ INSERT INTO `eqdkp22_links` (`link_id`, `link_url`, `link_name`, `link_window`, 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_logs`
+-- Tabellenstruktur für Tabelle `eqdkp21_logs`
 --
 
-CREATE TABLE `eqdkp22_logs` (
+CREATE TABLE `eqdkp21_logs` (
   `log_id` int(11) UNSIGNED NOT NULL,
   `log_date` int(11) NOT NULL DEFAULT '0',
   `log_value` text COLLATE utf8_bin NOT NULL,
@@ -706,10 +706,10 @@ CREATE TABLE `eqdkp22_logs` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_members`
+-- Tabellenstruktur für Tabelle `eqdkp21_members`
 --
 
-CREATE TABLE `eqdkp22_members` (
+CREATE TABLE `eqdkp21_members` (
   `member_id` smallint(5) UNSIGNED NOT NULL,
   `member_name` varchar(30) COLLATE utf8_bin NOT NULL,
   `member_status` tinyint(1) NOT NULL DEFAULT '1',
@@ -728,10 +728,10 @@ CREATE TABLE `eqdkp22_members` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_member_profilefields`
+-- Tabellenstruktur für Tabelle `eqdkp21_member_profilefields`
 --
 
-CREATE TABLE `eqdkp22_member_profilefields` (
+CREATE TABLE `eqdkp21_member_profilefields` (
   `name` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
   `type` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
   `category` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
@@ -749,10 +749,10 @@ CREATE TABLE `eqdkp22_member_profilefields` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_member_ranks`
+-- Tabellenstruktur für Tabelle `eqdkp21_member_ranks`
 --
 
-CREATE TABLE `eqdkp22_member_ranks` (
+CREATE TABLE `eqdkp21_member_ranks` (
   `rank_id` smallint(5) UNSIGNED NOT NULL,
   `rank_name` varchar(50) COLLATE utf8_bin NOT NULL,
   `rank_hide` tinyint(1) NOT NULL DEFAULT '0',
@@ -766,10 +766,10 @@ CREATE TABLE `eqdkp22_member_ranks` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_member_user`
+-- Tabellenstruktur für Tabelle `eqdkp21_member_user`
 --
 
-CREATE TABLE `eqdkp22_member_user` (
+CREATE TABLE `eqdkp21_member_user` (
   `member_id` smallint(5) UNSIGNED NOT NULL,
   `user_id` smallint(5) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -777,10 +777,10 @@ CREATE TABLE `eqdkp22_member_user` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_multidkp`
+-- Tabellenstruktur für Tabelle `eqdkp21_multidkp`
 --
 
-CREATE TABLE `eqdkp22_multidkp` (
+CREATE TABLE `eqdkp21_multidkp` (
   `multidkp_id` int(11) UNSIGNED NOT NULL,
   `multidkp_name` varchar(255) COLLATE utf8_bin NOT NULL,
   `multidkp_desc` text COLLATE utf8_bin NOT NULL,
@@ -788,19 +788,19 @@ CREATE TABLE `eqdkp22_multidkp` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Daten für Tabelle `eqdkp22_multidkp`
+-- Daten für Tabelle `eqdkp21_multidkp`
 --
 
-INSERT INTO `eqdkp22_multidkp` (`multidkp_id`, `multidkp_name`, `multidkp_desc`, `multidkp_sortid`) VALUES
+INSERT INTO `eqdkp21_multidkp` (`multidkp_id`, `multidkp_name`, `multidkp_desc`, `multidkp_sortid`) VALUES
 (1, 'Default', 'Default MultiDKPPool', 0);
 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_multidkp2event`
+-- Tabellenstruktur für Tabelle `eqdkp21_multidkp2event`
 --
 
-CREATE TABLE `eqdkp22_multidkp2event` (
+CREATE TABLE `eqdkp21_multidkp2event` (
   `multidkp2event_multi_id` int(11) NOT NULL,
   `multidkp2event_event_id` smallint(5) NOT NULL,
   `multidkp2event_no_attendance` int(1) NOT NULL DEFAULT '0'
@@ -809,28 +809,28 @@ CREATE TABLE `eqdkp22_multidkp2event` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_multidkp2itempool`
+-- Tabellenstruktur für Tabelle `eqdkp21_multidkp2itempool`
 --
 
-CREATE TABLE `eqdkp22_multidkp2itempool` (
+CREATE TABLE `eqdkp21_multidkp2itempool` (
   `multidkp2itempool_itempool_id` int(11) UNSIGNED NOT NULL,
   `multidkp2itempool_multi_id` int(11) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Daten für Tabelle `eqdkp22_multidkp2itempool`
+-- Daten für Tabelle `eqdkp21_multidkp2itempool`
 --
 
-INSERT INTO `eqdkp22_multidkp2itempool` (`multidkp2itempool_itempool_id`, `multidkp2itempool_multi_id`) VALUES
+INSERT INTO `eqdkp21_multidkp2itempool` (`multidkp2itempool_itempool_id`, `multidkp2itempool_multi_id`) VALUES
 (1, 1);
 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_notifications`
+-- Tabellenstruktur für Tabelle `eqdkp21_notifications`
 --
 
-CREATE TABLE `eqdkp22_notifications` (
+CREATE TABLE `eqdkp21_notifications` (
   `id` int(11) NOT NULL,
   `type` varchar(50) COLLATE utf8_bin NOT NULL,
   `user_id` int(11) NOT NULL,
@@ -845,10 +845,10 @@ CREATE TABLE `eqdkp22_notifications` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_notification_types`
+-- Tabellenstruktur für Tabelle `eqdkp21_notification_types`
 --
 
-CREATE TABLE `eqdkp22_notification_types` (
+CREATE TABLE `eqdkp21_notification_types` (
   `id` varchar(50) COLLATE utf8_bin NOT NULL,
   `name` varchar(50) COLLATE utf8_bin NOT NULL,
   `category` varchar(50) COLLATE utf8_bin DEFAULT NULL,
@@ -861,10 +861,10 @@ CREATE TABLE `eqdkp22_notification_types` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Daten für Tabelle `eqdkp22_notification_types`
+-- Daten für Tabelle `eqdkp21_notification_types`
 --
 
-INSERT INTO `eqdkp22_notification_types` (`id`, `name`, `category`, `prio`, `default`, `group`, `group_name`, `group_at`, `icon`) VALUES
+INSERT INTO `eqdkp21_notification_types` (`id`, `name`, `category`, `prio`, `default`, `group`, `group_name`, `group_at`, `icon`) VALUES
 ('calendarevent_char_statuschange', 'notification_calendarevent_statuschange', 'calendarevent', 1, 0, 1, 'notification_calendarevent_statuschange_grouped', 3, 'fa-refresh'),
 ('calendarevent_invitation', 'notification_calendarevent_invitation', 'calendarevent', 0, 1, 0, NULL, 0, 'fa-envelope'),
 ('calendarevent_mod_groupchange', 'notification_calendarevent_mod_groupchange', 'calendarevent', 0, 1, 0, 'notification_calendarevent_mod_groupchange_grouped', 3, 'fa-users'),
@@ -885,10 +885,10 @@ INSERT INTO `eqdkp22_notification_types` (`id`, `name`, `category`, `prio`, `def
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_plugins`
+-- Tabellenstruktur für Tabelle `eqdkp21_plugins`
 --
 
-CREATE TABLE `eqdkp22_plugins` (
+CREATE TABLE `eqdkp21_plugins` (
   `code` varchar(20) COLLATE utf8_bin NOT NULL,
   `status` tinyint(2) NOT NULL DEFAULT '0',
   `version` varchar(7) COLLATE utf8_bin NOT NULL
@@ -897,10 +897,10 @@ CREATE TABLE `eqdkp22_plugins` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_portal`
+-- Tabellenstruktur für Tabelle `eqdkp21_portal`
 --
 
-CREATE TABLE `eqdkp22_portal` (
+CREATE TABLE `eqdkp21_portal` (
   `id` mediumint(8) UNSIGNED NOT NULL,
   `name` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '',
   `path` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
@@ -917,30 +917,30 @@ CREATE TABLE `eqdkp22_portal` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_portal_blocks`
+-- Tabellenstruktur für Tabelle `eqdkp21_portal_blocks`
 --
 
-CREATE TABLE `eqdkp22_portal_blocks` (
+CREATE TABLE `eqdkp21_portal_blocks` (
   `id` int(10) NOT NULL,
   `name` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
   `wide_content` tinyint(1) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Daten für Tabelle `eqdkp22_portal_blocks`
+-- Daten für Tabelle `eqdkp21_portal_blocks`
 --
 
-INSERT INTO `eqdkp22_portal_blocks` (`id`, `name`, `wide_content`) VALUES
+INSERT INTO `eqdkp21_portal_blocks` (`id`, `name`, `wide_content`) VALUES
 (1, 'Header', 0),
 (2, 'Footer', 0);
 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_portal_layouts`
+-- Tabellenstruktur für Tabelle `eqdkp21_portal_layouts`
 --
 
-CREATE TABLE `eqdkp22_portal_layouts` (
+CREATE TABLE `eqdkp21_portal_layouts` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
   `blocks` text COLLATE utf8_bin NOT NULL,
@@ -949,19 +949,19 @@ CREATE TABLE `eqdkp22_portal_layouts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Daten für Tabelle `eqdkp22_portal_layouts`
+-- Daten für Tabelle `eqdkp21_portal_layouts`
 --
 
-INSERT INTO `eqdkp22_portal_layouts` (`id`, `name`, `blocks`, `modules`, `routes`) VALUES
+INSERT INTO `eqdkp21_portal_layouts` (`id`, `name`, `blocks`, `modules`, `routes`) VALUES
 (1, 'Standard', 'a:4:{i:0;s:4:"left";i:1;s:6:"middle";i:2;s:6:"bottom";i:3;s:5:"right";}', 'a:0:{}', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_raids`
+-- Tabellenstruktur für Tabelle `eqdkp21_raids`
 --
 
-CREATE TABLE `eqdkp22_raids` (
+CREATE TABLE `eqdkp21_raids` (
   `raid_id` mediumint(8) UNSIGNED NOT NULL,
   `event_id` smallint(5) UNSIGNED NOT NULL,
   `raid_date` int(11) NOT NULL DEFAULT '0',
@@ -975,10 +975,10 @@ CREATE TABLE `eqdkp22_raids` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_raid_attendees`
+-- Tabellenstruktur für Tabelle `eqdkp21_raid_attendees`
 --
 
-CREATE TABLE `eqdkp22_raid_attendees` (
+CREATE TABLE `eqdkp21_raid_attendees` (
   `raid_id` mediumint(8) UNSIGNED NOT NULL,
   `member_id` smallint(5) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -986,10 +986,10 @@ CREATE TABLE `eqdkp22_raid_attendees` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_repository`
+-- Tabellenstruktur für Tabelle `eqdkp21_repository`
 --
 
-CREATE TABLE `eqdkp22_repository` (
+CREATE TABLE `eqdkp21_repository` (
   `id` int(10) UNSIGNED NOT NULL,
   `plugin` varchar(255) COLLATE utf8_bin NOT NULL,
   `plugin_id` int(1) DEFAULT NULL,
@@ -1010,10 +1010,10 @@ CREATE TABLE `eqdkp22_repository` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Daten für Tabelle `eqdkp22_repository`
+-- Daten für Tabelle `eqdkp21_repository`
 --
 
-INSERT INTO `eqdkp22_repository` (`id`, `plugin`, `plugin_id`, `name`, `date`, `author`, `description`, `version`, `version_ext`, `category`, `level`, `changelog`, `dep_php`, `dep_coreversion`, `rating`, `updated`, `bugtracker_url`) VALUES
+INSERT INTO `eqdkp21_repository` (`id`, `plugin`, `plugin_id`, `name`, `date`, `author`, `description`, `version`, `version_ext`, `category`, `level`, `changelog`, `dep_php`, `dep_coreversion`, `rating`, `updated`, `bugtracker_url`) VALUES
 (1, 'eqdkp_diablo', 240, 'EQdkp Diablo', '1444281383', 'Asitara', 'Diablo Template made by Asitara', '0.1.1', '0.1.1', '2', 'stable', '[0.1.1] ---------------------------\r\n- much more style settings available\r\n- implements #1327\r\n[0.1.0] ---------------------------\r\n- new LESS version for EQdkp 2.1', '5.2', '2.1.0.9', 0, '1451699947', 'https://eqdkp-plus.eu/bugtracker/Product/28-EQdkp-Plus-Styles/'),
 (2, 'birthday', 171, 'Birthday', '1441646603', 'wallenium', 'Shows the next birthdays of your user.', '2.1.3', '2.1.3', '3', 'stable', '', '', '2.0.0.25', 0, '1451699947', ''),
 (3, 'tsw', 236, 'The Secret World', '1446551900', 'Inkraja', 'The Secret World is a massively multiplayer online role-playing video \r\ngame set in the modern day real world by developer Funcom. \r\n\r\nRoman "Tilty" Amiel is the Lead Designer, Laurie "Szemra" Payne the Community Manager', '2.1.8', '2.1.8', '7', 'stable', '2.1.8 Requires EQdkp 2.1\r\n- add Flappy Drops (Purge Itemcache in Case of issues)\r\n2.1.7 Requires EQdkp 2.1\r\nAdd issue 12 Information''s:\r\n-rename "Tokio" Placeholder Event to "Flappy" and give them an new Icon\r\n- change Items from Eidolon from 10.1 to 10.3\r\n- add the 3. heroic Item (without Img)\r\nCharacter:\r\n- Add the Wings, PVP Zones, TL Access\r\n\r\n2.1.6\r\n- Add Augment Resonator Items(DE/EN/FR)\r\n- Add Informations for Guildbank (DE/EN/FR)\r\n\r\n2.1.5\r\n- Add the Bug Fix from Funcom for Eidolon Items\r\n\r\n2.1.1\r\n- Signets in all quality levels\r\n- add infos from issue 11\r\n- add eidolon drop loot\r\n\r\n2.0.0\r\n- Updated for Eqdkp-Plus 2.0', '5.2', '2.1.0.9', 0, '1451699947', ''),
@@ -1110,10 +1110,10 @@ INSERT INTO `eqdkp22_repository` (`id`, `plugin`, `plugin_id`, `name`, `date`, `
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_roles`
+-- Tabellenstruktur für Tabelle `eqdkp21_roles`
 --
 
-CREATE TABLE `eqdkp22_roles` (
+CREATE TABLE `eqdkp21_roles` (
   `c_index` mediumint(5) UNSIGNED NOT NULL,
   `role_id` mediumint(8) UNSIGNED NOT NULL,
   `role_name` varchar(50) COLLATE utf8_bin DEFAULT NULL,
@@ -1121,10 +1121,10 @@ CREATE TABLE `eqdkp22_roles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Daten für Tabelle `eqdkp22_roles`
+-- Daten für Tabelle `eqdkp21_roles`
 --
 
-INSERT INTO `eqdkp22_roles` (`c_index`, `role_id`, `role_name`, `role_classes`) VALUES
+INSERT INTO `eqdkp21_roles` (`c_index`, `role_id`, `role_name`, `role_classes`) VALUES
 (1, 1, 'Heiler', ''),
 (2, 2, 'Tank', ''),
 (3, 3, 'Fernkämpfer', ''),
@@ -1133,10 +1133,10 @@ INSERT INTO `eqdkp22_roles` (`c_index`, `role_id`, `role_name`, `role_classes`) 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_sessions`
+-- Tabellenstruktur für Tabelle `eqdkp21_sessions`
 --
 
-CREATE TABLE `eqdkp22_sessions` (
+CREATE TABLE `eqdkp21_sessions` (
   `session_id` varchar(40) COLLATE utf8_bin NOT NULL,
   `session_user_id` smallint(5) NOT NULL DEFAULT '-1',
   `session_last_visit` int(11) NOT NULL DEFAULT '0',
@@ -1153,19 +1153,19 @@ CREATE TABLE `eqdkp22_sessions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Daten für Tabelle `eqdkp22_sessions`
+-- Daten für Tabelle `eqdkp21_sessions`
 --
 
-INSERT INTO `eqdkp22_sessions` (`session_id`, `session_user_id`, `session_last_visit`, `session_start`, `session_current`, `session_page`, `session_ip`, `session_browser`, `session_key`, `session_type`, `session_perm_id`, `session_failed_logins`, `session_vars`) VALUES
+INSERT INTO `eqdkp21_sessions` (`session_id`, `session_user_id`, `session_last_visit`, `session_start`, `session_current`, `session_page`, `session_ip`, `session_browser`, `session_key`, `session_type`, `session_perm_id`, `session_failed_logins`, `session_vars`) VALUES
 ('3b9617bdabfab5d009812ad999cbed16d1da07a3', 1, 1451699939, 1451699939, 1451699946, 'admin/index', '95.90.220.8', 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:43.0) Gecko/20100101 Firefox/43.0', '28836152ce5c', '', -1, 0, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_styles`
+-- Tabellenstruktur für Tabelle `eqdkp21_styles`
 --
 
-CREATE TABLE `eqdkp22_styles` (
+CREATE TABLE `eqdkp21_styles` (
   `style_id` smallint(5) UNSIGNED NOT NULL,
   `style_name` varchar(100) COLLATE utf8_bin NOT NULL DEFAULT '',
   `style_version` varchar(7) COLLATE utf8_bin DEFAULT NULL,
@@ -1245,19 +1245,19 @@ CREATE TABLE `eqdkp22_styles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Daten für Tabelle `eqdkp22_styles`
+-- Daten für Tabelle `eqdkp21_styles`
 --
 
-INSERT INTO `eqdkp22_styles` (`style_id`, `style_name`, `style_version`, `style_contact`, `style_author`, `enabled`, `template_path`, `attendees_columns`, `logo_position`, `background_img`, `column_right_width`, `column_left_width`, `portal_width`, `background_pos`, `background_type`, `body_background_color`, `body_font_color`, `body_font_size`, `body_font_family`, `body_link_color`, `body_link_color_hover`, `body_link_decoration`, `container_background_color`, `container_border_color`, `content_background_color`, `content_font_color`, `content_font_color_headings`, `content_link_color`, `content_link_color_hover`, `content_border_color`, `content_accent_color`, `userarea_background_color`, `userarea_font_color`, `userarea_link_color`, `userarea_link_color_hover`, `table_th_background_color`, `table_th_font_color`, `table_tr_font_color`, `table_tr_background_color1`, `table_tr_background_color2`, `table_tr_background_color_hover`, `table_border_color`, `menu_background_color`, `menu_font_color`, `menu_item_background_color`, `menu_item_background_color_hover`, `menu_item_font_color_hover`, `sidebar_background_color`, `sidebar_font_color`, `sidebar_border_color`, `button_background_color`, `button_font_color`, `button_border_color`, `button_background_color_hover`, `button_font_color_hover`, `button_border_color_hover`, `input_background_color`, `input_border_color`, `input_font_color`, `input_background_color_active`, `input_border_color_active`, `input_font_color_active`, `content_contrast_color`, `content_contrast_background_color`, `content_contrast_border_color`, `content_positive_color`, `content_negative_color`, `content_neutral_color`, `content_highlight_color`, `misc_color1`, `misc_color2`, `misc_color3`, `misc_text1`, `misc_text2`, `misc_text3`, `additional_less`) VALUES
+INSERT INTO `eqdkp21_styles` (`style_id`, `style_name`, `style_version`, `style_contact`, `style_author`, `enabled`, `template_path`, `attendees_columns`, `logo_position`, `background_img`, `column_right_width`, `column_left_width`, `portal_width`, `background_pos`, `background_type`, `body_background_color`, `body_font_color`, `body_font_size`, `body_font_family`, `body_link_color`, `body_link_color_hover`, `body_link_decoration`, `container_background_color`, `container_border_color`, `content_background_color`, `content_font_color`, `content_font_color_headings`, `content_link_color`, `content_link_color_hover`, `content_border_color`, `content_accent_color`, `userarea_background_color`, `userarea_font_color`, `userarea_link_color`, `userarea_link_color_hover`, `table_th_background_color`, `table_th_font_color`, `table_tr_font_color`, `table_tr_background_color1`, `table_tr_background_color2`, `table_tr_background_color_hover`, `table_border_color`, `menu_background_color`, `menu_font_color`, `menu_item_background_color`, `menu_item_background_color_hover`, `menu_item_font_color_hover`, `sidebar_background_color`, `sidebar_font_color`, `sidebar_border_color`, `button_background_color`, `button_font_color`, `button_border_color`, `button_background_color_hover`, `button_font_color_hover`, `button_border_color_hover`, `input_background_color`, `input_border_color`, `input_font_color`, `input_background_color_active`, `input_border_color_active`, `input_font_color_active`, `content_contrast_color`, `content_contrast_background_color`, `content_contrast_border_color`, `content_positive_color`, `content_negative_color`, `content_neutral_color`, `content_highlight_color`, `misc_color1`, `misc_color2`, `misc_color3`, `misc_text1`, `misc_text2`, `misc_text3`, `additional_less`) VALUES
 (1, 'EQdkp Modern', '0.2.0', '', 'GodMod', '1', 'eqdkp_modern', '6', 'left', '', '0px', '0px', '0px', 'normal', 0, 'rgb(46, 120, 176)', 'rgb(255, 255, 255)', '13', 'Tahoma,Arial,Verdana,sans-serif', 'rgb(254, 254, 254)', 'rgb(255, 255, 255)', 'none', 'rgb(224, 224, 224)', 'rgb(56, 56, 56)', 'rgb(245, 245, 245)', 'rgb(0, 0, 0)', 'rgb(0, 0, 0)', 'rgb(78, 127, 168)', 'rgb(0, 0, 0)', 'rgb(204, 204, 204)', 'rgb(234, 234, 234)', 'rgb(69, 72, 77)', 'rgb(217, 215, 215)', 'rgb(217, 215, 215)', 'rgb(255, 255, 255)', 'rgb(232, 232, 232)', 'rgb(0, 0, 0)', '', 'rgb(249, 249, 249)', 'rgb(245, 245, 245)', 'rgb(232, 232, 232)', 'rgb(221, 221, 221)', 'rgb(69, 72, 77)', 'rgb(217, 215, 215)', 'rgba(255, 255, 255, 0)', 'rgb(0, 0, 0)', 'rgb(217, 215, 215)', 'rgb(234, 234, 234)', 'rgb(0, 0, 0)', 'rgb(204, 204, 204)', 'rgb(0, 173, 238)', 'rgb(228, 245, 252)', 'rgb(0, 118, 163)', 'rgb(0, 149, 204)', 'rgb(217, 238, 247)', 'rgb(0, 118, 163)', 'rgb(255, 255, 255)', 'rgb(204, 204, 204)', 'rgb(85, 85, 85)', 'rgb(255, 255, 255)', 'rgba(82, 168, 236, 0.8)', 'rgb(85, 85, 85)', 'rgb(0, 0, 0)', 'rgb(252, 253, 254)', 'rgb(204, 204, 204)', 'rgb(51, 204, 51)', 'rgb(226, 59, 48)', 'rgb(153, 153, 153)', 'rgb(78, 127, 168)', 'rgb(78, 127, 168)', 'rgb(255, 255, 255)', '', '', '', '', '@styleCommentContainerBackgroundColor: #fff;\r\n@styleCommentContainerBorderColor: #ccc;\r\n@styleCommentAuthorColor: #9f9f9f;\r\n@stylePaginationBorderColor: #ddd;\r\n@stylePaginationBackgroundColor: #fff;\r\n@stylePaginationActiveBackgroundColor: #F7F7F9;\r\n@stylePaginationActiveColor: #999;\r\n@stylePaginationActiveHoverBackgroundColor: #F7F7F9;\r\n@stylePaginationActiveHoverColor: #000;\r\n@styleArticleSitemapBorderColor: #ddd;\r\n@styleArticleSitemapBackgroundColor: #fff;\r\n@styleArticleSitemapActiveBackgroundColor: #F7F7F9;\r\n@styleArticleSitemapActiveColor: #999999;\r\n@styleArticleSitemapHoverColor: #000;\r\n');
 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_users`
+-- Tabellenstruktur für Tabelle `eqdkp21_users`
 --
 
-CREATE TABLE `eqdkp22_users` (
+CREATE TABLE `eqdkp21_users` (
   `user_id` smallint(5) UNSIGNED NOT NULL,
   `username` varchar(30) COLLATE utf8_bin NOT NULL,
   `user_password` varchar(255) COLLATE utf8_bin NOT NULL,
@@ -1301,10 +1301,10 @@ CREATE TABLE `eqdkp22_users` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `eqdkp22_user_profilefields`
+-- Tabellenstruktur für Tabelle `eqdkp21_user_profilefields`
 --
 
-CREATE TABLE `eqdkp22_user_profilefields` (
+CREATE TABLE `eqdkp21_user_profilefields` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8_bin NOT NULL,
   `lang_var` varchar(255) COLLATE utf8_bin NOT NULL,
@@ -1325,10 +1325,10 @@ CREATE TABLE `eqdkp22_user_profilefields` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Daten für Tabelle `eqdkp22_user_profilefields`
+-- Daten für Tabelle `eqdkp21_user_profilefields`
 --
 
-INSERT INTO `eqdkp22_user_profilefields` (`id`, `name`, `lang_var`, `type`, `length`, `minlength`, `validation`, `required`, `show_on_registration`, `enabled`, `sort_order`, `is_contact`, `contact_url`, `icon_or_image`, `bridge_field`, `options`, `editable`) VALUES
+INSERT INTO `eqdkp21_user_profilefields` (`id`, `name`, `lang_var`, `type`, `length`, `minlength`, `validation`, `required`, `show_on_registration`, `enabled`, `sort_order`, `is_contact`, `contact_url`, `icon_or_image`, `bridge_field`, `options`, `editable`) VALUES
 (1, 'location', 'userpf_location', 'text', 100, 2, '', 0, 0, 1, 2, 0, '', 'fa-map-marker', '', 'a:1:{s:7:"options";a:0:{}}', 1),
 (2, 'website', 'userpf_website', 'link', 255, 10, '', 0, 0, 1, 12, 1, '%s', 'fa-globe', NULL, NULL, 1),
 (3, 'interests', 'userpf_interests', 'textarea', 500, 2, '', 0, 0, 1, 3, 0, NULL, NULL, NULL, NULL, 1),
@@ -1348,265 +1348,265 @@ INSERT INTO `eqdkp22_user_profilefields` (`id`, `name`, `lang_var`, `type`, `len
 --
 
 --
--- Indizes für die Tabelle `eqdkp22_adjustments`
+-- Indizes für die Tabelle `eqdkp21_adjustments`
 --
-ALTER TABLE `eqdkp22_adjustments`
+ALTER TABLE `eqdkp21_adjustments`
   ADD PRIMARY KEY (`adjustment_id`);
 
 --
--- Indizes für die Tabelle `eqdkp22_articles`
+-- Indizes für die Tabelle `eqdkp21_articles`
 --
-ALTER TABLE `eqdkp22_articles`
+ALTER TABLE `eqdkp21_articles`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indizes für die Tabelle `eqdkp22_article_categories`
+-- Indizes für die Tabelle `eqdkp21_article_categories`
 --
-ALTER TABLE `eqdkp22_article_categories`
+ALTER TABLE `eqdkp21_article_categories`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indizes für die Tabelle `eqdkp22_auth_groups`
+-- Indizes für die Tabelle `eqdkp21_auth_groups`
 --
-ALTER TABLE `eqdkp22_auth_groups`
+ALTER TABLE `eqdkp21_auth_groups`
   ADD KEY `auth_id` (`auth_id`),
   ADD KEY `group_id` (`group_id`);
 
 --
--- Indizes für die Tabelle `eqdkp22_auth_options`
+-- Indizes für die Tabelle `eqdkp21_auth_options`
 --
-ALTER TABLE `eqdkp22_auth_options`
+ALTER TABLE `eqdkp21_auth_options`
   ADD PRIMARY KEY (`auth_id`),
   ADD KEY `auth_value` (`auth_value`);
 
 --
--- Indizes für die Tabelle `eqdkp22_auth_users`
+-- Indizes für die Tabelle `eqdkp21_auth_users`
 --
-ALTER TABLE `eqdkp22_auth_users`
+ALTER TABLE `eqdkp21_auth_users`
   ADD KEY `auth_id` (`auth_id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indizes für die Tabelle `eqdkp22_calendars`
+-- Indizes für die Tabelle `eqdkp21_calendars`
 --
-ALTER TABLE `eqdkp22_calendars`
+ALTER TABLE `eqdkp21_calendars`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indizes für die Tabelle `eqdkp22_calendar_events`
+-- Indizes für die Tabelle `eqdkp21_calendar_events`
 --
-ALTER TABLE `eqdkp22_calendar_events`
+ALTER TABLE `eqdkp21_calendar_events`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indizes für die Tabelle `eqdkp22_calendar_raid_attendees`
+-- Indizes für die Tabelle `eqdkp21_calendar_raid_attendees`
 --
-ALTER TABLE `eqdkp22_calendar_raid_attendees`
+ALTER TABLE `eqdkp21_calendar_raid_attendees`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indizes für die Tabelle `eqdkp22_calendar_raid_guests`
+-- Indizes für die Tabelle `eqdkp21_calendar_raid_guests`
 --
-ALTER TABLE `eqdkp22_calendar_raid_guests`
+ALTER TABLE `eqdkp21_calendar_raid_guests`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indizes für die Tabelle `eqdkp22_calendar_raid_templates`
+-- Indizes für die Tabelle `eqdkp21_calendar_raid_templates`
 --
-ALTER TABLE `eqdkp22_calendar_raid_templates`
+ALTER TABLE `eqdkp21_calendar_raid_templates`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indizes für die Tabelle `eqdkp22_classcolors`
+-- Indizes für die Tabelle `eqdkp21_classcolors`
 --
-ALTER TABLE `eqdkp22_classcolors`
+ALTER TABLE `eqdkp21_classcolors`
   ADD PRIMARY KEY (`class_id`,`template`);
 
 --
--- Indizes für die Tabelle `eqdkp22_comments`
+-- Indizes für die Tabelle `eqdkp21_comments`
 --
-ALTER TABLE `eqdkp22_comments`
+ALTER TABLE `eqdkp21_comments`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indizes für die Tabelle `eqdkp22_config`
+-- Indizes für die Tabelle `eqdkp21_config`
 --
-ALTER TABLE `eqdkp22_config`
+ALTER TABLE `eqdkp21_config`
   ADD PRIMARY KEY (`config_name`,`config_plugin`);
 
 --
--- Indizes für die Tabelle `eqdkp22_events`
+-- Indizes für die Tabelle `eqdkp21_events`
 --
-ALTER TABLE `eqdkp22_events`
+ALTER TABLE `eqdkp21_events`
   ADD PRIMARY KEY (`event_id`);
 
 --
--- Indizes für die Tabelle `eqdkp22_groups_raid`
+-- Indizes für die Tabelle `eqdkp21_groups_raid`
 --
-ALTER TABLE `eqdkp22_groups_raid`
+ALTER TABLE `eqdkp21_groups_raid`
   ADD PRIMARY KEY (`groups_raid_id`);
 
 --
--- Indizes für die Tabelle `eqdkp22_groups_user`
+-- Indizes für die Tabelle `eqdkp21_groups_user`
 --
-ALTER TABLE `eqdkp22_groups_user`
+ALTER TABLE `eqdkp21_groups_user`
   ADD PRIMARY KEY (`groups_user_id`);
 
 --
--- Indizes für die Tabelle `eqdkp22_itempool`
+-- Indizes für die Tabelle `eqdkp21_itempool`
 --
-ALTER TABLE `eqdkp22_itempool`
+ALTER TABLE `eqdkp21_itempool`
   ADD PRIMARY KEY (`itempool_id`);
 
 --
--- Indizes für die Tabelle `eqdkp22_items`
+-- Indizes für die Tabelle `eqdkp21_items`
 --
-ALTER TABLE `eqdkp22_items`
+ALTER TABLE `eqdkp21_items`
   ADD PRIMARY KEY (`item_id`);
 
 --
--- Indizes für die Tabelle `eqdkp22_links`
+-- Indizes für die Tabelle `eqdkp21_links`
 --
-ALTER TABLE `eqdkp22_links`
+ALTER TABLE `eqdkp21_links`
   ADD PRIMARY KEY (`link_id`);
 
 --
--- Indizes für die Tabelle `eqdkp22_logs`
+-- Indizes für die Tabelle `eqdkp21_logs`
 --
-ALTER TABLE `eqdkp22_logs`
+ALTER TABLE `eqdkp21_logs`
   ADD PRIMARY KEY (`log_id`),
   ADD KEY `user_id` (`user_id`),
   ADD KEY `log_tag` (`log_tag`),
   ADD KEY `log_ipaddress` (`log_ipaddress`);
 
 --
--- Indizes für die Tabelle `eqdkp22_members`
+-- Indizes für die Tabelle `eqdkp21_members`
 --
-ALTER TABLE `eqdkp22_members`
+ALTER TABLE `eqdkp21_members`
   ADD PRIMARY KEY (`member_id`);
 
 --
--- Indizes für die Tabelle `eqdkp22_member_profilefields`
+-- Indizes für die Tabelle `eqdkp21_member_profilefields`
 --
-ALTER TABLE `eqdkp22_member_profilefields`
+ALTER TABLE `eqdkp21_member_profilefields`
   ADD PRIMARY KEY (`name`);
 
 --
--- Indizes für die Tabelle `eqdkp22_member_ranks`
+-- Indizes für die Tabelle `eqdkp21_member_ranks`
 --
-ALTER TABLE `eqdkp22_member_ranks`
+ALTER TABLE `eqdkp21_member_ranks`
   ADD UNIQUE KEY `rank_id` (`rank_id`);
 
 --
--- Indizes für die Tabelle `eqdkp22_member_user`
+-- Indizes für die Tabelle `eqdkp21_member_user`
 --
-ALTER TABLE `eqdkp22_member_user`
+ALTER TABLE `eqdkp21_member_user`
   ADD KEY `member_id` (`member_id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indizes für die Tabelle `eqdkp22_multidkp`
+-- Indizes für die Tabelle `eqdkp21_multidkp`
 --
-ALTER TABLE `eqdkp22_multidkp`
+ALTER TABLE `eqdkp21_multidkp`
   ADD PRIMARY KEY (`multidkp_id`);
 
 --
--- Indizes für die Tabelle `eqdkp22_multidkp2event`
+-- Indizes für die Tabelle `eqdkp21_multidkp2event`
 --
-ALTER TABLE `eqdkp22_multidkp2event`
+ALTER TABLE `eqdkp21_multidkp2event`
   ADD PRIMARY KEY (`multidkp2event_multi_id`,`multidkp2event_event_id`);
 
 --
--- Indizes für die Tabelle `eqdkp22_multidkp2itempool`
+-- Indizes für die Tabelle `eqdkp21_multidkp2itempool`
 --
-ALTER TABLE `eqdkp22_multidkp2itempool`
+ALTER TABLE `eqdkp21_multidkp2itempool`
   ADD PRIMARY KEY (`multidkp2itempool_itempool_id`,`multidkp2itempool_multi_id`);
 
 --
--- Indizes für die Tabelle `eqdkp22_notifications`
+-- Indizes für die Tabelle `eqdkp21_notifications`
 --
-ALTER TABLE `eqdkp22_notifications`
+ALTER TABLE `eqdkp21_notifications`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indizes für die Tabelle `eqdkp22_notification_types`
+-- Indizes für die Tabelle `eqdkp21_notification_types`
 --
-ALTER TABLE `eqdkp22_notification_types`
+ALTER TABLE `eqdkp21_notification_types`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indizes für die Tabelle `eqdkp22_plugins`
+-- Indizes für die Tabelle `eqdkp21_plugins`
 --
-ALTER TABLE `eqdkp22_plugins`
+ALTER TABLE `eqdkp21_plugins`
   ADD PRIMARY KEY (`code`);
 
 --
--- Indizes für die Tabelle `eqdkp22_portal`
+-- Indizes für die Tabelle `eqdkp21_portal`
 --
-ALTER TABLE `eqdkp22_portal`
+ALTER TABLE `eqdkp21_portal`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indizes für die Tabelle `eqdkp22_portal_blocks`
+-- Indizes für die Tabelle `eqdkp21_portal_blocks`
 --
-ALTER TABLE `eqdkp22_portal_blocks`
+ALTER TABLE `eqdkp21_portal_blocks`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indizes für die Tabelle `eqdkp22_portal_layouts`
+-- Indizes für die Tabelle `eqdkp21_portal_layouts`
 --
-ALTER TABLE `eqdkp22_portal_layouts`
+ALTER TABLE `eqdkp21_portal_layouts`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indizes für die Tabelle `eqdkp22_raids`
+-- Indizes für die Tabelle `eqdkp21_raids`
 --
-ALTER TABLE `eqdkp22_raids`
+ALTER TABLE `eqdkp21_raids`
   ADD PRIMARY KEY (`raid_id`);
 
 --
--- Indizes für die Tabelle `eqdkp22_raid_attendees`
+-- Indizes für die Tabelle `eqdkp21_raid_attendees`
 --
-ALTER TABLE `eqdkp22_raid_attendees`
+ALTER TABLE `eqdkp21_raid_attendees`
   ADD KEY `raid_id` (`raid_id`),
   ADD KEY `member_id` (`member_id`);
 
 --
--- Indizes für die Tabelle `eqdkp22_repository`
+-- Indizes für die Tabelle `eqdkp21_repository`
 --
-ALTER TABLE `eqdkp22_repository`
+ALTER TABLE `eqdkp21_repository`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indizes für die Tabelle `eqdkp22_roles`
+-- Indizes für die Tabelle `eqdkp21_roles`
 --
-ALTER TABLE `eqdkp22_roles`
+ALTER TABLE `eqdkp21_roles`
   ADD PRIMARY KEY (`c_index`);
 
 --
--- Indizes für die Tabelle `eqdkp22_sessions`
+-- Indizes für die Tabelle `eqdkp21_sessions`
 --
-ALTER TABLE `eqdkp22_sessions`
+ALTER TABLE `eqdkp21_sessions`
   ADD PRIMARY KEY (`session_id`),
   ADD KEY `session_current` (`session_current`);
 
 --
--- Indizes für die Tabelle `eqdkp22_styles`
+-- Indizes für die Tabelle `eqdkp21_styles`
 --
-ALTER TABLE `eqdkp22_styles`
+ALTER TABLE `eqdkp21_styles`
   ADD PRIMARY KEY (`style_id`);
 
 --
--- Indizes für die Tabelle `eqdkp22_users`
+-- Indizes für die Tabelle `eqdkp21_users`
 --
-ALTER TABLE `eqdkp22_users`
+ALTER TABLE `eqdkp21_users`
   ADD PRIMARY KEY (`user_id`),
   ADD UNIQUE KEY `username` (`username`);
 
 --
--- Indizes für die Tabelle `eqdkp22_user_profilefields`
+-- Indizes für die Tabelle `eqdkp21_user_profilefields`
 --
-ALTER TABLE `eqdkp22_user_profilefields`
+ALTER TABLE `eqdkp21_user_profilefields`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1614,149 +1614,149 @@ ALTER TABLE `eqdkp22_user_profilefields`
 --
 
 --
--- AUTO_INCREMENT für Tabelle `eqdkp22_adjustments`
+-- AUTO_INCREMENT für Tabelle `eqdkp21_adjustments`
 --
-ALTER TABLE `eqdkp22_adjustments`
+ALTER TABLE `eqdkp21_adjustments`
   MODIFY `adjustment_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT für Tabelle `eqdkp22_articles`
+-- AUTO_INCREMENT für Tabelle `eqdkp21_articles`
 --
-ALTER TABLE `eqdkp22_articles`
+ALTER TABLE `eqdkp21_articles`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
--- AUTO_INCREMENT für Tabelle `eqdkp22_article_categories`
+-- AUTO_INCREMENT für Tabelle `eqdkp21_article_categories`
 --
-ALTER TABLE `eqdkp22_article_categories`
+ALTER TABLE `eqdkp21_article_categories`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
--- AUTO_INCREMENT für Tabelle `eqdkp22_auth_options`
+-- AUTO_INCREMENT für Tabelle `eqdkp21_auth_options`
 --
-ALTER TABLE `eqdkp22_auth_options`
+ALTER TABLE `eqdkp21_auth_options`
   MODIFY `auth_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 --
--- AUTO_INCREMENT für Tabelle `eqdkp22_calendars`
+-- AUTO_INCREMENT für Tabelle `eqdkp21_calendars`
 --
-ALTER TABLE `eqdkp22_calendars`
+ALTER TABLE `eqdkp21_calendars`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT für Tabelle `eqdkp22_calendar_events`
+-- AUTO_INCREMENT für Tabelle `eqdkp21_calendar_events`
 --
-ALTER TABLE `eqdkp22_calendar_events`
+ALTER TABLE `eqdkp21_calendar_events`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT für Tabelle `eqdkp22_calendar_raid_attendees`
+-- AUTO_INCREMENT für Tabelle `eqdkp21_calendar_raid_attendees`
 --
-ALTER TABLE `eqdkp22_calendar_raid_attendees`
+ALTER TABLE `eqdkp21_calendar_raid_attendees`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT für Tabelle `eqdkp22_calendar_raid_guests`
+-- AUTO_INCREMENT für Tabelle `eqdkp21_calendar_raid_guests`
 --
-ALTER TABLE `eqdkp22_calendar_raid_guests`
+ALTER TABLE `eqdkp21_calendar_raid_guests`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT für Tabelle `eqdkp22_calendar_raid_templates`
+-- AUTO_INCREMENT für Tabelle `eqdkp21_calendar_raid_templates`
 --
-ALTER TABLE `eqdkp22_calendar_raid_templates`
+ALTER TABLE `eqdkp21_calendar_raid_templates`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT für Tabelle `eqdkp22_comments`
+-- AUTO_INCREMENT für Tabelle `eqdkp21_comments`
 --
-ALTER TABLE `eqdkp22_comments`
+ALTER TABLE `eqdkp21_comments`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT für Tabelle `eqdkp22_events`
+-- AUTO_INCREMENT für Tabelle `eqdkp21_events`
 --
-ALTER TABLE `eqdkp22_events`
+ALTER TABLE `eqdkp21_events`
   MODIFY `event_id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT für Tabelle `eqdkp22_groups_raid`
+-- AUTO_INCREMENT für Tabelle `eqdkp21_groups_raid`
 --
-ALTER TABLE `eqdkp22_groups_raid`
+ALTER TABLE `eqdkp21_groups_raid`
   MODIFY `groups_raid_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT für Tabelle `eqdkp22_groups_user`
+-- AUTO_INCREMENT für Tabelle `eqdkp21_groups_user`
 --
-ALTER TABLE `eqdkp22_groups_user`
+ALTER TABLE `eqdkp21_groups_user`
   MODIFY `groups_user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
--- AUTO_INCREMENT für Tabelle `eqdkp22_itempool`
+-- AUTO_INCREMENT für Tabelle `eqdkp21_itempool`
 --
-ALTER TABLE `eqdkp22_itempool`
+ALTER TABLE `eqdkp21_itempool`
   MODIFY `itempool_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT für Tabelle `eqdkp22_items`
+-- AUTO_INCREMENT für Tabelle `eqdkp21_items`
 --
-ALTER TABLE `eqdkp22_items`
+ALTER TABLE `eqdkp21_items`
   MODIFY `item_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT für Tabelle `eqdkp22_links`
+-- AUTO_INCREMENT für Tabelle `eqdkp21_links`
 --
-ALTER TABLE `eqdkp22_links`
+ALTER TABLE `eqdkp21_links`
   MODIFY `link_id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
--- AUTO_INCREMENT für Tabelle `eqdkp22_logs`
+-- AUTO_INCREMENT für Tabelle `eqdkp21_logs`
 --
-ALTER TABLE `eqdkp22_logs`
+ALTER TABLE `eqdkp21_logs`
   MODIFY `log_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT für Tabelle `eqdkp22_members`
+-- AUTO_INCREMENT für Tabelle `eqdkp21_members`
 --
-ALTER TABLE `eqdkp22_members`
+ALTER TABLE `eqdkp21_members`
   MODIFY `member_id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT für Tabelle `eqdkp22_multidkp`
+-- AUTO_INCREMENT für Tabelle `eqdkp21_multidkp`
 --
-ALTER TABLE `eqdkp22_multidkp`
+ALTER TABLE `eqdkp21_multidkp`
   MODIFY `multidkp_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT für Tabelle `eqdkp22_notifications`
+-- AUTO_INCREMENT für Tabelle `eqdkp21_notifications`
 --
-ALTER TABLE `eqdkp22_notifications`
+ALTER TABLE `eqdkp21_notifications`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT für Tabelle `eqdkp22_portal`
+-- AUTO_INCREMENT für Tabelle `eqdkp21_portal`
 --
-ALTER TABLE `eqdkp22_portal`
+ALTER TABLE `eqdkp21_portal`
   MODIFY `id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT für Tabelle `eqdkp22_portal_blocks`
+-- AUTO_INCREMENT für Tabelle `eqdkp21_portal_blocks`
 --
-ALTER TABLE `eqdkp22_portal_blocks`
+ALTER TABLE `eqdkp21_portal_blocks`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT für Tabelle `eqdkp22_portal_layouts`
+-- AUTO_INCREMENT für Tabelle `eqdkp21_portal_layouts`
 --
-ALTER TABLE `eqdkp22_portal_layouts`
+ALTER TABLE `eqdkp21_portal_layouts`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT für Tabelle `eqdkp22_raids`
+-- AUTO_INCREMENT für Tabelle `eqdkp21_raids`
 --
-ALTER TABLE `eqdkp22_raids`
+ALTER TABLE `eqdkp21_raids`
   MODIFY `raid_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT für Tabelle `eqdkp22_repository`
+-- AUTO_INCREMENT für Tabelle `eqdkp21_repository`
 --
-ALTER TABLE `eqdkp22_repository`
+ALTER TABLE `eqdkp21_repository`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
 --
--- AUTO_INCREMENT für Tabelle `eqdkp22_roles`
+-- AUTO_INCREMENT für Tabelle `eqdkp21_roles`
 --
-ALTER TABLE `eqdkp22_roles`
+ALTER TABLE `eqdkp21_roles`
   MODIFY `c_index` mediumint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
--- AUTO_INCREMENT für Tabelle `eqdkp22_styles`
+-- AUTO_INCREMENT für Tabelle `eqdkp21_styles`
 --
-ALTER TABLE `eqdkp22_styles`
+ALTER TABLE `eqdkp21_styles`
   MODIFY `style_id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT für Tabelle `eqdkp22_users`
+-- AUTO_INCREMENT für Tabelle `eqdkp21_users`
 --
-ALTER TABLE `eqdkp22_users`
+ALTER TABLE `eqdkp21_users`
   MODIFY `user_id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT für Tabelle `eqdkp22_user_profilefields`
+-- AUTO_INCREMENT für Tabelle `eqdkp21_user_profilefields`
 --
-ALTER TABLE `eqdkp22_user_profilefields`
+ALTER TABLE `eqdkp21_user_profilefields`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
