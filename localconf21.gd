@@ -209,7 +209,7 @@ $localconf = array (
   array (
     'dttl' => '86400',
     'mode' => 'file',
-    'prefix' => 'eqdkp22_',
+    'prefix' => 'eqdkp21_',
   ),
   'pk_attendance90' => '1',
   'pk_known_task_hash' => '0',
