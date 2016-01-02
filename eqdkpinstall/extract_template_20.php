@@ -7,7 +7,7 @@
 
 function extract_eqdkp_template($path, $subdomain){
   $zip = new ZipArchive;
-  if ($zip->open($path . "eqdkp_template20.zip") === TRUE) {
+  if ($zip->open($path . "eqdkp_template21.zip") === TRUE) {
     $zip->extractTo($path . "" . $subdomain . "/");
     $zip->close();
   }else{
