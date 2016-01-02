@@ -6,7 +6,7 @@
 //» 05-06-2015
 
 function copy_and_rename($path, $var){
-  $file = $path . "hosttemplate20.sql"; //=> mysql-template
+  $file = $path . "hosttemplate21.sql"; //=> mysql-template
   $newfile = $path . "httpdocs/eqdkpinstall/sqltmp/" . $var . ".sql"; //=> filename = prefix
 			
   if (!copy($file, $newfile)) {
@@ -14,7 +14,7 @@ function copy_and_rename($path, $var){
   }
 			
   //=> adjust prefix
-  $search = eqdkp20_;
+  $search = eqdkp21_;
   $replace = $var . "_"; 
   $file = $path . "httpdocs/eqdkpinstall/sqltmp/" . $var . ".sql"; 
 
