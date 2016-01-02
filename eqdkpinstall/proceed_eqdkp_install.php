@@ -64,13 +64,13 @@ mysqli_select_db($con, $dbname);
 $sqladmin = mysqli_real_escape_string($con, $adminuser);
 
 //=> declare mysql-request for table _users
-$sql = "insert " . $var . "_users (user_id, username, user_password, user_lang, user_email, user_active, rules, user_style) values ('1', '" . $sqladmin . "', '" . $md5passwd . "', 'german', '" . $sqlmail . "', '1', '0', '1')";
+$sql = "INSERT " . $var . "_users (user_id, username, user_password, user_lang, user_email, user_active, rules, user_style) values ('1', '" . $sqladmin . "', '" . $md5passwd . "', 'german', '" . $sqlmail . "', '1', '0', '1')";
 
 //=> run mysql-request for table _users
 mysqli_query($con, $sql);
 
 //=> declare mysql-request for table _group_users
-$sql = "insert " . $var . "_groups_users" . "(group_id, user_id) VALUES (2,1)";
+$sql = "INSERT " . $var . "_groups_users" . "(group_id, user_id) VALUES (2,1)";
 
 //=> run mysql-request for talbe _group_users
 mysqli_query($con, $sql);
