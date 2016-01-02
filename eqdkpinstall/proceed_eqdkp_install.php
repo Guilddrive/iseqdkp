@@ -26,12 +26,16 @@ $md5passwd = md5($passwd); //=> hash the password for mysql request and use it a
 
 //=> include functions
 require('./set_permissions.php'); //=> set file permissions
-require('./extract_template_20.php'); //=> Unzip Data - Important! The eqdkp_template.zip mustn't contain the "config.php and localconf.php". The folder "data/md5(mysql_prefix+databasename)/" must be renamed into "dkphash".
+require('./extract_template_21.php'); //=> Unzip Data - Important! The eqdkp_template.zip mustn't contain the "config.php and localconf.php". The folder "data/md5(mysql_prefix+databasename)/" must be renamed into "dkphash".
 require('./create_config.php'); //=> creating config.php
-require('./copy_and_rename_20.php'); //=> adjust .SQL-Dumps - searching and adjusing prefixes of the mysql-tables
-require('./create_db_20.php');	//=> importing mysql template
+require('./copy_and_rename_21.php'); //=> adjust .SQL-Dumps - searching and adjusing prefixes of the mysql-tables
+require('./create_db_21.php');	//=> importing mysql template
 require('./copy_and_rename_localconf.php'); //=> adjusting localconf.php - for searching and adjusting mysql-prefix - will be copyied to "data/md5(mysql_prefix+datebasename)/eqdkp/config"
 require('./hash_and_rename.php'); //=> creating hash with mysql_prefix and databasename and adjusts the folder data/dkphash
+
+//=> encrypt email with AES
+$encryptionKey = md5(md5(md5($key)));
+$sqlmail = AesCtr::encrypt($mail, md5($encryptionKey), 256);
 
 //=> run functions
 set_permission($path, "", $subdomain, 0777); //=>run
@@ -41,13 +45,9 @@ copy_and_rename($path, $var); //=> run
 set_permission($path, $subdomain, "/config.php", 0644); //=> run
 set_permission($path, $subdomain, "/data", 0777); //=> run
 import_eqdkp_db($path, $var, $var, $md5passwd); //=> run
-copy_and_rename_localconf($path, $var, $subdomain); //=> run
+copy_and_rename_localconf($path, $var, $subdomain, $sqlmail); //=> run
 hash_and_rename($path, $subdomain, $var); //=> run
 set_permission($path, "", $subdomain, 0755); //=>run
-
-//=> encrypt email with AES
-$encryptionKey = md5(md5(md5($key)));
-$sqlmail = AesCtr::encrypt($mail, md5($encryptionKey), 256);
 
 //=> mysql data
 $dbtype = 'mysqli';
@@ -73,6 +73,12 @@ mysqli_query($con, $sql);
 $sql = "insert " . $var . "_groups_users" . "(group_id, user_id) VALUES (2,1)";
 
 //=> run mysql-request for talbe _group_users
+mysqli_query($con, $sql);
+
+//=> declare mysql-request for table _config
+$sql=("UPDATE " . $var . "_config SET config_value='$sqlmail' WHERE config_name='admin_email'");
+
+//=> run mysql-request for talbe _config
 mysqli_query($con, $sql);
 
 //=> verify mysql-request
